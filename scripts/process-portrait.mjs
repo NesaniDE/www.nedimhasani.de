@@ -10,8 +10,11 @@ await mkdir(dirname(DEST), { recursive: true });
 
 await sharp(SRC)
   .grayscale()
-  // a touch more contrast so the portrait reads on the very dark hero
-  .linear(1.08, -8)
+  // softer tonality: mild contrast, slight lift in midtones
+  .linear(0.96, 6)
+  .modulate({ brightness: 1.02 })
+  // very gentle blur to take the edge off without losing detail
+  .blur(0.4)
   .png({ compressionLevel: 9, palette: false })
   .toFile(DEST);
 
