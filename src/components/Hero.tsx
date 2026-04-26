@@ -1,4 +1,17 @@
-import { ArrowRightIcon, NesaniLogoMark } from "@/components/icons";
+import Link from "next/link";
+import {
+  GithubIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  XIcon,
+} from "@/components/icons";
+
+const socials = [
+  { Icon: LinkedInIcon, href: "#", label: "LinkedIn" },
+  { Icon: InstagramIcon, href: "#", label: "Instagram" },
+  { Icon: XIcon, href: "#", label: "X" },
+  { Icon: GithubIcon, href: "#", label: "GitHub" },
+];
 
 export function Hero() {
   return (
@@ -8,45 +21,30 @@ export function Hero() {
     >
       <div className="bg-radial-glow pointer-events-none absolute inset-0" />
 
-      {/* Massive bg word */}
-      <h1 className="bg-name absolute -bottom-6 left-0 right-0 text-[15vw] md:text-[18vw] lg:text-[230px] leading-[0.85] text-center select-none pointer-events-none z-0 px-4">
-        NESANI
+      {/* Massive background name */}
+      <h1 className="bg-name absolute -bottom-2 left-0 right-0 text-[15vw] md:text-[18vw] lg:text-[230px] leading-[0.85] text-center select-none pointer-events-none z-0 px-4">
+        Nedim Hasani
       </h1>
 
-      {/* Floating cube logo right */}
-      <div className="absolute right-6 md:right-16 top-1/2 -translate-y-1/2 hidden md:block z-0 opacity-90">
-        <NesaniLogoMark className="h-[260px] w-[260px] lg:h-[340px] lg:w-[340px] drop-shadow-[0_20px_60px_rgba(0,0,0,0.6)]" />
-      </div>
+      <div className="relative z-10 mx-auto flex h-full w-full max-w-[1440px] flex-col px-6 md:px-10 pt-32 md:pt-36">
+        <p className="max-w-xs md:max-w-[400px] text-[20px] md:text-[26px] lg:text-[30px] leading-[1.13] tracking-[-0.03em] text-[#878787]">
+          Personal page of Nedim Hasani — building digital products,
+          experimenting with AI, and shipping ideas worth keeping.
+        </p>
 
-      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 md:px-10">
-        <div className="max-w-[820px]">
-          <p className="mb-6 text-[13px] md:text-[14px] uppercase tracking-[0.28em] text-[#a0a0a0]">
-            Aus Schwäbisch Gmünd · Für den DACH-Raum
-          </p>
-          <h2 className="text-[14vw] sm:text-[80px] md:text-[110px] lg:text-[130px] font-medium leading-[0.95] tracking-[-0.05em] text-white">
-            <span className="block">Sichtbarer.</span>
-            <span className="block text-[#878787]">Effizienter.</span>
-            <span className="block">Autonomer.</span>
-          </h2>
-          <p className="mt-8 max-w-[560px] text-[18px] md:text-[20px] leading-[1.45] tracking-[-0.025em] text-[#878787]">
-            Nesani entwickelt digitale Präsenz, KI-Integration und autonome
-            Systeme für Unternehmen mit Anspruch.
-          </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a
-              href="#contact"
-              className="pill-button inline-flex items-center gap-2"
+        <div className="mt-auto mb-10 flex items-center gap-7">
+          {socials.map(({ Icon, href, label }) => (
+            <Link
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="text-white/80 hover:text-white transition-colors"
             >
-              Projekt anfragen
-              <ArrowRightIcon className="h-4 w-4" />
-            </a>
-            <a
-              href="#leistungen"
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3.5 text-[15px] text-white hover:bg-white/5 transition-colors"
-            >
-              Leistungen ansehen
-            </a>
-          </div>
+              <Icon className="h-5 w-5" />
+            </Link>
+          ))}
         </div>
       </div>
 
