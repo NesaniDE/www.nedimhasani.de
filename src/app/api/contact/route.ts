@@ -78,7 +78,7 @@ export async function POST(req: Request) {
   const safeEmail = escapeHtml(email);
   const safeMessage = escapeHtml(message).replace(/\n/g, "<br>");
 
-  const subject = `Neue Anfrage von ${name} · nedimhasani.de`;
+  const subject = "Nedim Hasani Kontaktformular";
   const text = `Neue Anfrage über nedimhasani.de\n\nName: ${name}\nE-Mail: ${email}\n\n${message}\n`;
   const html = `
     <div style="font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif; color: #111; line-height: 1.55;">
