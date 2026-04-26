@@ -5,8 +5,10 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Datenschutz — Nedim Hasani",
-  description: "Datenschutzerklärung gemäß DSGVO.",
+  title: "Datenschutz",
+  description:
+    "Datenschutzerklärung gemäß DSGVO. Welche Daten werden verarbeitet, auf welcher Grundlage und welche Rechte haben Besucher dieser Website.",
+  alternates: { canonical: "https://www.nedimhasani.de/datenschutz" },
 };
 
 export default function DatenschutzPage() {

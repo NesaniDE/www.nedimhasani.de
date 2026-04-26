@@ -5,8 +5,10 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Impressum — Nedim Hasani",
-  description: "Impressum und rechtliche Angaben.",
+  title: "Impressum",
+  description:
+    "Impressum und rechtliche Angaben gemäß § 5 TMG für Nedim Hasani / Nesani UG (haftungsbeschränkt) i.G., Schwäbisch Gmünd.",
+  alternates: { canonical: "https://www.nedimhasani.de/imprint" },
 };
 
 export default function ImprintPage() {
