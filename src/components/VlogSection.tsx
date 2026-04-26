@@ -1,64 +1,81 @@
-import Image from "next/image";
-import Link from "next/link";
-import { PlayIcon, YouTubeBadgeIcon } from "@/components/icons";
+import { ArrowUpRightIcon } from "@/components/icons";
+
+const posts = [
+  {
+    category: "Websites",
+    date: "26. April 2026",
+    title:
+      "Wie Unternehmen mit einer starken Leistungsseite bessere Leads statt nur mehr Klicks bekommen",
+    excerpt:
+      "Mehr Traffic allein löst selten ein Vertriebsproblem. Entscheidender ist, ob eine Leistungsseite echte Relevanz aufbaut, Einwände beantwortet und den nächsten Schritt vorbereitet.",
+  },
+  {
+    category: "KI & Automatisierung",
+    date: "25. April 2026",
+    title:
+      "KI im Vertrieb: Welche Aufgaben sinnvoll unterstützt werden können",
+    excerpt:
+      "KI ist im Vertrieb vor allem dort sinnvoll, wo Vorbereitung, Struktur und Geschwindigkeit zählen. Gute Systeme entlasten, ohne den Beziehungsaufbau zu mechanisieren.",
+  },
+  {
+    category: "Prozesse",
+    date: "24. April 2026",
+    title:
+      "Warum langsame Reaktionszeiten online mehr Umsatz kosten als viele denken",
+    excerpt:
+      "Viele Unternehmen unterschätzen nicht die Zahl ihrer Anfragen, sondern die verlorene Wirkung zwischen Eingang und Antwort.",
+  },
+];
 
 export function VlogSection() {
   return (
     <section
-      id="vlog"
+      id="blog"
       className="relative px-6 md:px-10 py-24 md:py-32 border-t border-white/5"
     >
-      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
-        <div className="max-w-[520px]">
-          <h2 className="heading-gradient text-[36px] md:text-[50px] font-medium leading-[1.05] tracking-[-0.05em] mb-8">
-            Building in Public &ndash; The Founder&rsquo;s Journey
-          </h2>
-          <p className="text-[16px] md:text-[18px] leading-[1.55] tracking-[-0.025em] text-[#878787] mb-8">
-            After founding, investing in, and exiting several 7- to 9-figure
-            companies, I&rsquo;ve decided to share the journey of my latest
-            venture on YouTube. Follow along as I build day one&reg; from the
-            ground up, balancing the highs and lows of entrepreneurship while
-            documenting every step.
-          </p>
-          <Link
-            href="https://www.youtube.com/@alvarogellings/videos"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[15px] text-white/80 hover:text-white transition-colors underline-offset-4 hover:underline"
+      <div className="mx-auto w-full max-w-[1440px]">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-14">
+          <div className="max-w-[640px]">
+            <p className="mb-3 text-[12px] uppercase tracking-[0.28em] text-[#a0a0a0]">
+              Aus dem Blog
+            </p>
+            <h2 className="heading-gradient text-[44px] md:text-[60px] font-medium leading-[1] tracking-[-0.06em]">
+              Praxis statt Hype.
+            </h2>
+          </div>
+          <a
+            href="#blog"
+            className="self-start sm:self-auto inline-flex items-center gap-2 text-[15px] text-[#a0a0a0] hover:text-white transition-colors"
           >
-            Vlog overview
-          </Link>
+            Alle Beiträge
+            <ArrowUpRightIcon className="h-4 w-4" />
+          </a>
         </div>
 
-        <Link
-          href="https://www.youtube.com/watch?v=nLnOZiAIKDs"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group block w-full max-w-[600px] justify-self-center lg:justify-self-end"
-        >
-          <div className="relative overflow-hidden rounded-2xl ring-1 ring-white/10">
-            <Image
-              src="/images/vlog-thumb.jpg"
-              alt="A Realistic Weekend of Building an 8 Figure Sportswear Brand"
-              width={720}
-              height={405}
-              className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.02]"
-            />
-            <div className="absolute inset-0 flex items-center justify-center bg-black/10">
-              <PlayIcon className="h-16 w-16 text-white/90 transition-transform group-hover:scale-110" />
-            </div>
-          </div>
-          <div className="mt-4 flex items-end justify-between gap-3 px-1">
-            <p className="text-[16px] md:text-[17px] font-medium tracking-[-0.025em] leading-snug text-white">
-              A Realistic Weekend of Building an 8 Figure Sportswear Brand
-              <br />
-              <span className="text-[14px] font-normal text-[#a0a0a0]">
-                Watch on YouTube
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {posts.map((p) => (
+            <article
+              key={p.title}
+              className="group rounded-2xl bg-white/[0.025] ring-1 ring-white/10 p-7 transition-all hover:bg-white/[0.04] hover:ring-white/20"
+            >
+              <div className="flex items-center gap-3 text-[12px] uppercase tracking-[0.22em] text-[#a0a0a0]">
+                <span>{p.category}</span>
+                <span className="h-1 w-1 rounded-full bg-[#555]" />
+                <span>{p.date}</span>
+              </div>
+              <h3 className="mt-5 text-[19px] md:text-[20px] font-medium leading-[1.25] tracking-[-0.025em] text-white">
+                {p.title}
+              </h3>
+              <p className="mt-4 text-[14.5px] leading-[1.55] tracking-[-0.02em] text-[#878787]">
+                {p.excerpt}
+              </p>
+              <span className="mt-6 inline-flex items-center gap-2 text-[14px] text-white/80 group-hover:text-white transition-colors">
+                Beitrag lesen
+                <ArrowUpRightIcon className="h-3.5 w-3.5" />
               </span>
-            </p>
-            <YouTubeBadgeIcon className="h-5 w-7 text-[#a0a0a0]" />
-          </div>
-        </Link>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -17,22 +17,38 @@ export function ContactSection() {
     >
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
         <div className="max-w-[520px]">
+          <p className="mb-3 text-[12px] uppercase tracking-[0.28em] text-[#a0a0a0]">
+            Kontakt
+          </p>
           <h2 className="heading-gradient text-[44px] md:text-[60px] font-medium leading-[1] tracking-[-0.06em] mb-8">
-            Let&rsquo;s connect!
+            Kompliziert?
+            <br />
+            Nicht mit uns.
           </h2>
-          <h4 className="text-[20px] md:text-[22px] leading-[1.22] tracking-[-0.025em] text-white">
-            Whether you&rsquo;re looking to book me as a speaker, tap into my
-            expertise in entrepreneurship, scaling businesses, and navigating the
-            creator economy, or explore how I can help you, I&rsquo;m here to
-            help.
-          </h4>
+          <p className="text-[18px] leading-[1.55] tracking-[-0.025em] text-[#878787] mb-8">
+            Erzählen Sie uns kurz, woran Sie arbeiten — wir melden uns
+            innerhalb eines Werktags mit einer ehrlichen Einschätzung und
+            nächsten Schritten.
+          </p>
+          <div className="space-y-2 text-[15px] text-[#a0a0a0]">
+            <p>
+              <span className="text-white">E-Mail:</span> hello@nesani.de
+            </p>
+            <p>
+              <span className="text-white">Standort:</span> Schwäbisch Gmünd ·
+              DACH-Raum
+            </p>
+          </div>
         </div>
 
         <form onSubmit={handleSubmit} className="w-full max-w-[600px]">
           {submitted ? (
-            <p className="text-white text-lg">
-              Thanks for reaching out! I&rsquo;ll get back to you soon.
-            </p>
+            <div className="rounded-2xl bg-white/[0.04] ring-1 ring-white/10 p-8">
+              <p className="text-white text-lg">
+                Danke für Ihre Anfrage! Wir melden uns bei Ihnen — meist
+                innerhalb eines Werktags.
+              </p>
+            </div>
           ) : (
             <>
               <input
@@ -45,22 +61,21 @@ export function ContactSection() {
               <input
                 type="email"
                 name="email"
-                placeholder="Email*"
+                placeholder="E-Mail*"
                 required
                 className="ag-input mb-[18px]"
               />
               <input
-                type="tel"
-                name="phone"
-                placeholder="Phone*"
-                required
+                type="text"
+                name="company"
+                placeholder="Unternehmen"
                 className="ag-input mb-[18px]"
               />
               <textarea
                 name="message"
-                placeholder="Message*"
+                placeholder="Worum geht's? Kurz beschreiben.*"
                 required
-                rows={4}
+                rows={5}
                 className="ag-input mb-6 resize-none"
               />
 
@@ -73,15 +88,14 @@ export function ContactSection() {
                     className="mt-1 h-4 w-4 shrink-0 rounded-full border border-white/40 bg-transparent appearance-none checked:bg-white checked:border-white cursor-pointer"
                   />
                   <span className="text-[11px] leading-snug tracking-[-0.02em] text-[#878787]">
-                    I have read the privacy policy, and I agree that the data I
-                    provide will be collected and stored electronically to process
-                    and answer my request. By submitting the contact form, I
-                    consent to process my data.
+                    Ich habe die Datenschutzerklärung gelesen und bin
+                    einverstanden, dass meine Angaben elektronisch gespeichert
+                    werden, um meine Anfrage zu bearbeiten.
                   </span>
                 </label>
 
                 <button type="submit" className="pill-button shrink-0">
-                  Submit
+                  Anfrage senden
                 </button>
               </div>
             </>

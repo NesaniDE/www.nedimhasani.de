@@ -4,13 +4,10 @@ import { dirname, join } from 'node:path';
 const BASE = new URL('..', import.meta.url).pathname;
 
 const assets = [
-  { url: 'https://www.alvarogellings.com/wp-content/themes/alvarogellings/images/logo.svg', dest: 'public/images/logo.svg' },
-  { url: 'https://www.alvarogellings.com/wp-content/themes/alvarogellings/images/alvaro-neu.png', dest: 'public/images/alvaro.png' },
-  { url: 'https://www.alvarogellings.com/wp-content/uploads/video-thumb.jpg', dest: 'public/images/video-thumb.jpg' },
-  { url: 'https://www.alvarogellings.com/wp-content/uploads/AG-PB-720x405.jpg', dest: 'public/images/vlog-thumb.jpg' },
-  { url: 'https://www.alvarogellings.com/wp-content/uploads/cropped-favIcon-32x32.png', dest: 'public/seo/favicon-32x32.png' },
-  { url: 'https://www.alvarogellings.com/wp-content/uploads/cropped-favIcon-192x192.png', dest: 'public/seo/favicon-192x192.png' },
-  { url: 'https://www.alvarogellings.com/wp-content/uploads/cropped-favIcon-180x180.png', dest: 'public/seo/apple-touch-icon.png' },
+  { url: 'https://www.nesani.de/icon-32.png', dest: 'public/seo/favicon-32x32.png' },
+  { url: 'https://www.nesani.de/icon-192.png', dest: 'public/seo/favicon-192x192.png' },
+  { url: 'https://www.nesani.de/icon-512.png', dest: 'public/seo/favicon-512x512.png' },
+  { url: 'https://www.nesani.de/apple-icon.png', dest: 'public/seo/apple-touch-icon.png' },
 ];
 
 async function fetchToFile({ url, dest }) {

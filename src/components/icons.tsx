@@ -2,51 +2,67 @@ import type { SVGProps } from "react";
 
 type IconProps = SVGProps<SVGSVGElement>;
 
-export function LinkedInIcon(props: IconProps) {
+export function NesaniLogoMark(props: IconProps) {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.268 2.37 4.268 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+    <svg viewBox="0 0 64 64" fill="none" aria-hidden="true" {...props}>
+      <defs>
+        <linearGradient id="nesani-cube-top" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#ffffff" />
+          <stop offset="1" stopColor="#cfcfcf" />
+        </linearGradient>
+        <linearGradient id="nesani-cube-left" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#a8a8a8" />
+          <stop offset="1" stopColor="#5e5e5e" />
+        </linearGradient>
+        <linearGradient id="nesani-cube-right" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#7a7a7a" />
+          <stop offset="1" stopColor="#3a3a3a" />
+        </linearGradient>
+      </defs>
+      {/* top face */}
+      <path
+        d="M32 6 L56 18 L32 30 L8 18 Z"
+        fill="url(#nesani-cube-top)"
+        stroke="rgba(255,255,255,0.4)"
+        strokeWidth="0.6"
+      />
+      {/* left face */}
+      <path
+        d="M8 18 L32 30 L32 58 L8 46 Z"
+        fill="url(#nesani-cube-left)"
+        stroke="rgba(255,255,255,0.25)"
+        strokeWidth="0.6"
+      />
+      {/* right face */}
+      <path
+        d="M56 18 L32 30 L32 58 L56 46 Z"
+        fill="url(#nesani-cube-right)"
+        stroke="rgba(255,255,255,0.25)"
+        strokeWidth="0.6"
+      />
+      {/* inner accents */}
+      <path
+        d="M14 22 L20 25 M44 25 L50 22 M32 38 L32 52"
+        stroke="rgba(255,255,255,0.55)"
+        strokeWidth="0.7"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }
 
-export function InstagramIcon(props: IconProps) {
+export function ArrowRightIcon(props: IconProps) {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
+      <path d="M5 12h14M13 6l6 6-6 6" />
     </svg>
   );
 }
 
-export function XIcon(props: IconProps) {
+export function ArrowUpRightIcon(props: IconProps) {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-    </svg>
-  );
-}
-
-export function YouTubeIcon(props: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-    </svg>
-  );
-}
-
-export function PlayIcon(props: IconProps) {
-  return (
-    <svg viewBox="0 0 60 60" fill="none" aria-hidden="true" {...props}>
-      <circle cx="30" cy="30" r="29.5" stroke="currentColor" />
-      <path d="M24 19l16 11-16 11V19z" fill="currentColor" />
-    </svg>
-  );
-}
-
-export function CloseIcon(props: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true" {...props}>
-      <path d="M6 6l12 12M18 6L6 18" />
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
+      <path d="M7 17L17 7M9 7h8v8" />
     </svg>
   );
 }
@@ -59,28 +75,66 @@ export function ArrowUpIcon(props: IconProps) {
   );
 }
 
-export function YouTubeBadgeIcon(props: IconProps) {
+export function CloseIcon(props: IconProps) {
   return (
-    <svg viewBox="0 0 28 20" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M27.408 3.13a3.5 3.5 0 0 0-2.46-2.474C22.78 0 14 0 14 0S5.22 0 3.052.656A3.5 3.5 0 0 0 .592 3.13C0 5.31 0 10 0 10s0 4.69.592 6.87a3.5 3.5 0 0 0 2.46 2.474C5.22 20 14 20 14 20s8.78 0 10.948-.656a3.5 3.5 0 0 0 2.46-2.474C28 14.69 28 10 28 10s0-4.69-.592-6.87zM11.2 14.286V5.714L18.667 10 11.2 14.286z" />
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true" {...props}>
+      <path d="M6 6l12 12M18 6L6 18" />
     </svg>
   );
 }
 
-export function LogoMark(props: SVGProps<SVGSVGElement>) {
+export function GlobeIcon(props: IconProps) {
   return (
-    <svg viewBox="0 0 152 26" fill="currentColor" aria-hidden="true" {...props}>
-      <text
-        x="0"
-        y="20"
-        fontFamily="var(--font-onest), sans-serif"
-        fontSize="20"
-        fontWeight="500"
-        letterSpacing="-0.5"
-      >
-        AlvaroGellings
-      </text>
-      <circle cx="148" cy="20" r="2" />
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18" />
+    </svg>
+  );
+}
+
+export function BoltIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
+      <path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z" />
+    </svg>
+  );
+}
+
+export function CpuIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
+      <rect x="5" y="5" width="14" height="14" rx="2" />
+      <rect x="9" y="9" width="6" height="6" rx="1" />
+      <path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3" />
+    </svg>
+  );
+}
+
+export function ShareIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
+      <circle cx="6" cy="12" r="3" />
+      <circle cx="18" cy="6" r="3" />
+      <circle cx="18" cy="18" r="3" />
+      <path d="M8.6 10.7l6.8-3.4M8.6 13.3l6.8 3.4" />
+    </svg>
+  );
+}
+
+export function ChatBubbleIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
+      <path d="M21 12a8 8 0 1 1-3.5-6.6L21 4l-1 4.6A8 8 0 0 1 21 12z" />
+      <path d="M8 11h8M8 15h5" />
+    </svg>
+  );
+}
+
+export function LayersIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
+      <path d="M12 3l9 5-9 5-9-5 9-5z" />
+      <path d="M3 13l9 5 9-5M3 18l9 5 9-5" />
     </svg>
   );
 }
