@@ -1,0 +1,34 @@
+# Nedim Hasani
+
+> Persönliche Website von Nedim Hasani — Gründer von Nesani UG (haftungsbeschränkt) i.G. aus Schwäbisch Gmünd. Software-Entwickler mit Schwerpunkt auf Web-, Mobile- und Produkt-Engineering, KI-Integration und autonomen Systemen für Unternehmen im DACH-Raum.
+
+## Über Nedim
+- Gründer von Nesani — Studio für digitale Strukturen, KI-Integration und autonome Systeme
+- Informatik-Studium an der Universität Stuttgart abgeschlossen
+- Frühere Mitarbeit an Projekten unter Christian Jungwirth Management — Berührungspunkte u.a. mit ESN, Jako, Oktagon MMA
+- Ansässig in Schwäbisch Gmünd, Deutschland
+- E-Mail: info@nedimhasani.de
+
+## Aktuelle Projekte (alle unter Nesani)
+- [Nesani](https://www.nesani.de): Hauptprojekt — Studio für digitale Strukturen, KI und autonome Systeme im DACH-Raum
+- [GD-Listen](https://gd-listen-two.vercel.app): Kuratierte Top-10-Listen für Schwäbisch Gmünd (Beta)
+- [BEM-Marktplatz](https://bem-marktplatz-theta.vercel.app): Marktplatz, auf dem KI-Agenten echte Menschen für reale Aufgaben beauftragen, inkl. eigenem MCP-Server (in Entwicklung)
+- [Nesani Editor](https://nesani-editor.vercel.app): KI-gestützte Websitepflege per Chat — Next.js 16 + Supabase (in Entwicklung)
+
+## Seiten
+- [Startseite](https://www.nedimhasani.de): Hero mit Bio, aktuelle Projekte, Kontakt
+- [Impressum](https://www.nedimhasani.de/imprint): Pflichtangaben gemäß § 5 TMG
+- [Datenschutz](https://www.nedimhasani.de/datenschutz): Datenschutzerklärung gemäß DSGVO
+
+## Social
+- LinkedIn: https://www.linkedin.com/in/nedimhasani
+- Instagram: https://www.instagram.com/nedimhasani
+- TikTok: https://www.tiktok.com/@nedimhasani
+- YouTube: https://www.youtube.com/@nedimhasani
+- GitHub: https://github.com/NesaniDE
+
+## Tech-Stack der Seite
+- Next.js 16 (App Router) · React 19 · TypeScript
+- Tailwind CSS v4 · shadcn/ui
+- Hosting: Vercel
+- Mailversand: Resend (Kontaktformular)
