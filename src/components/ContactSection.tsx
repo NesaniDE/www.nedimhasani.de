@@ -53,27 +53,27 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative px-6 md:px-10 py-24 md:py-32 border-t border-white/5"
+      className="relative px-5 sm:px-6 md:px-10 py-20 md:py-32 border-t border-white/5"
     >
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
         <div className="max-w-[520px]">
           <Reveal>
-            <h2 className="heading-gradient text-[44px] md:text-[60px] font-medium leading-[1] tracking-[-0.06em] mb-8">
+            <h2 className="heading-gradient text-[36px] sm:text-[44px] md:text-[60px] font-medium leading-[1] tracking-[-0.06em] mb-6 md:mb-8">
               Lass uns reden!
             </h2>
           </Reveal>
           <Reveal delay={80}>
-            <h4 className="text-[20px] md:text-[22px] leading-[1.22] tracking-[-0.025em] text-white mb-8">
+            <h4 className="text-[18px] sm:text-[20px] md:text-[22px] leading-[1.32] sm:leading-[1.22] tracking-[-0.025em] text-white mb-6 md:mb-8">
               Egal ob Projekt, Frage oder einfach nur Hallo — das Postfach ist
               offen.
             </h4>
           </Reveal>
           <Reveal delay={160}>
-            <p className="text-[15px] text-[#a0a0a0]">
+            <p className="text-[14px] sm:text-[15px] text-[#a0a0a0]">
               Oder direkt per E-Mail:{" "}
               <a
                 href="mailto:info@nedimhasani.de"
-                className="text-white hover:underline"
+                className="text-white hover:underline break-all sm:break-normal"
               >
                 info@nedimhasani.de
               </a>

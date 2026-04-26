@@ -77,14 +77,14 @@ export function HeroAbout() {
       `}</style>
       <div className="lg:grid lg:grid-cols-12">
         {/* Left column — sticky photo + name + mission */}
-        <div className="relative h-screen min-h-[760px] overflow-hidden lg:col-span-7 lg:sticky lg:top-0 lg:h-screen lg:overflow-visible">
+        <div className="relative h-[100svh] min-h-[640px] lg:min-h-[760px] overflow-hidden lg:col-span-7 lg:sticky lg:top-0 lg:h-screen lg:overflow-visible">
           <div className="bg-radial-glow pointer-events-none absolute inset-0" />
 
           {/* Big bg-name — spans the FULL viewport, anchored to section
               bottom. Doesn't shift with the dock so the right half of the
               screen is filled with the giant typography from the start. */}
           <h1
-            className="bg-name absolute bottom-0 left-0 right-0 lg:right-[-71.4%] text-center text-[15vw] md:text-[18vw] lg:text-[18vw] xl:text-[18vw] leading-[0.9] z-0 select-none animate-hero-name pointer-events-none"
+            className="bg-name absolute bottom-0 left-0 right-0 lg:right-[-71.4%] text-center text-[22vw] md:text-[18vw] lg:text-[18vw] xl:text-[18vw] leading-[0.9] z-0 select-none animate-hero-name pointer-events-none"
           >
             Nedim Hasani
           </h1>
@@ -112,14 +112,14 @@ export function HeroAbout() {
           {/* Mission text + socials — fade out as photo docks left */}
           <div
             ref={missionRef}
-            className="hero-mission relative z-30 flex h-full w-full flex-col px-6 md:px-10 pt-32 md:pt-36 pointer-events-auto"
+            className="hero-mission relative z-30 flex h-full w-full flex-col px-5 sm:px-6 md:px-10 pt-24 md:pt-36 pointer-events-auto"
           >
-            <p className="max-w-xs md:max-w-[420px] text-[20px] md:text-[26px] lg:text-[28px] xl:text-[30px] leading-[1.13] tracking-[-0.03em] text-[#878787] animate-hero-copy">
+            <p className="max-w-[260px] sm:max-w-xs md:max-w-[420px] text-[17px] sm:text-[20px] md:text-[26px] lg:text-[28px] xl:text-[30px] leading-[1.18] sm:leading-[1.13] tracking-[-0.03em] text-[#878787] animate-hero-copy">
               Gründer von Nesani. Ich baue Software-, Web- und App-Produkte —
               für ambitionierte Marken und die Menschen dahinter.
             </p>
 
-            <div className="mt-auto mb-10 flex items-center gap-7 animate-hero-socials">
+            <div className="mt-auto mb-8 md:mb-10 flex items-center gap-6 md:gap-7 animate-hero-socials">
               {socials.map(({ Icon, href, label }) => (
                 <Link
                   key={label}
@@ -141,28 +141,28 @@ export function HeroAbout() {
             before the bio appears. */}
         <div
           id="about"
-          className="relative px-6 lg:col-span-5 lg:pl-4 lg:pr-12 xl:pr-16 pt-24 pb-24 lg:pt-[100vh] lg:pb-[20vh]"
+          className="relative px-5 sm:px-6 lg:col-span-5 lg:pl-4 lg:pr-12 xl:pr-16 pt-20 pb-24 lg:pt-[100vh] lg:pb-[20vh]"
         >
           <div className="max-w-[560px]">
             <Reveal>
-              <p className="mb-3 text-[12px] uppercase tracking-[0.28em] text-[#a0a0a0]">
+              <p className="mb-3 text-[11px] sm:text-[12px] uppercase tracking-[0.28em] text-[#a0a0a0]">
                 Über mich
               </p>
             </Reveal>
             <Reveal>
-              <h2 className="heading-gradient text-[44px] md:text-[60px] font-medium leading-[1] tracking-[-0.06em] mb-10">
+              <h2 className="heading-gradient text-[36px] sm:text-[44px] md:text-[60px] font-medium leading-[1] tracking-[-0.06em] mb-8 md:mb-10">
                 Hi, ich bin Nedim.
               </h2>
             </Reveal>
 
             <Reveal delay={80}>
-              <h4 className="text-[20px] md:text-[22px] leading-[1.32] tracking-[-0.025em] text-white mb-8">
+              <h4 className="text-[18px] sm:text-[20px] md:text-[22px] leading-[1.32] tracking-[-0.025em] text-white mb-7 md:mb-8">
                 Gründer von Nesani und seit Jahren als Software-Entwickler in
                 Web, Mobile und Produkt-Engineering unterwegs.
               </h4>
             </Reveal>
 
-            <div className="space-y-6 text-[16px] md:text-[18px] leading-[1.55] tracking-[-0.025em] text-[#878787]">
+            <div className="space-y-5 md:space-y-6 text-[15px] sm:text-[16px] md:text-[18px] leading-[1.6] md:leading-[1.55] tracking-[-0.025em] text-[#878787]">
               <Reveal delay={160}>
                 <p>
                   Mein Studium der Informatik habe ich an der Universität

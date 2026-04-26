@@ -136,12 +136,17 @@
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 9px;
-  padding: 21px 27px;
+  padding: 16px 20px;
   color: #ffffff;
   width: 100%;
   font-size: 15px;
   letter-spacing: -0.03em;
   transition: border-color 200ms ease;
+}
+@media (min-width: 640px) {
+  .ag-input {
+    padding: 21px 27px;
+  }
 }
 .ag-input:focus {
   outline: none;

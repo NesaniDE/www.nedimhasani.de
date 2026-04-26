@@ -32,9 +32,9 @@ export function CookieBanner() {
     <div
       role="dialog"
       aria-label="Cookie-Einstellungen"
-      className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 sm:max-w-[420px] z-[80] animate-cookie-in"
+      className="fixed bottom-3 left-3 right-3 sm:left-auto sm:right-6 sm:bottom-6 sm:max-w-[420px] z-[80] animate-cookie-in"
     >
-      <div className="rounded-2xl bg-[#0d0d0d]/90 backdrop-blur-xl ring-1 ring-white/10 p-6 shadow-2xl">
+      <div className="rounded-2xl bg-[#0d0d0d]/90 backdrop-blur-xl ring-1 ring-white/10 p-5 sm:p-6 shadow-2xl">
         <p className="text-[12px] uppercase tracking-[0.28em] text-[#a0a0a0]">
           Cookies
         </p>

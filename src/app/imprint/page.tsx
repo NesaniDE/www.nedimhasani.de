@@ -15,27 +15,27 @@ export default function ImprintPage() {
   return (
     <>
       <Header />
-      <main className="relative pt-32 md:pt-40 pb-24 px-6 md:px-10">
+      <main className="relative pt-28 md:pt-40 pb-20 md:pb-24 px-5 sm:px-6 md:px-10">
         <div className="mx-auto w-full max-w-[820px]">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-[14px] text-[#a0a0a0] hover:text-white transition-colors mb-12"
+            className="inline-flex items-center gap-2 text-[13px] sm:text-[14px] text-[#a0a0a0] hover:text-white transition-colors mb-10 md:mb-12"
           >
             <ArrowUpIcon className="h-4 w-4 -rotate-90" />
             Zurück zur Startseite
           </Link>
 
-          <p className="mb-3 text-[12px] uppercase tracking-[0.28em] text-[#a0a0a0]">
+          <p className="mb-3 text-[11px] sm:text-[12px] uppercase tracking-[0.28em] text-[#a0a0a0]">
             Rechtliches
           </p>
-          <h1 className="heading-gradient text-[44px] md:text-[60px] font-medium leading-[1] tracking-[-0.06em] mb-3">
+          <h1 className="heading-gradient text-[36px] sm:text-[44px] md:text-[60px] font-medium leading-[1] tracking-[-0.06em] mb-3">
             Impressum
           </h1>
-          <p className="text-[14px] text-[#a0a0a0] mb-14">
+          <p className="text-[13px] sm:text-[14px] text-[#a0a0a0] mb-10 md:mb-14">
             Stand: April 2026
           </p>
 
-          <div className="space-y-12 text-[16px] md:text-[17px] leading-[1.65] tracking-[-0.02em] text-[#878787]">
+          <div className="space-y-10 md:space-y-12 text-[15px] sm:text-[16px] md:text-[17px] leading-[1.65] tracking-[-0.02em] text-[#878787]">
             <section>
               <h2 className="text-[20px] font-medium tracking-[-0.025em] text-white mb-4">
                 Angaben gemäß § 5 TMG

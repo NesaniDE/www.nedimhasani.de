@@ -52,18 +52,18 @@ export function VlogSection() {
   return (
     <section
       id="work"
-      className="relative px-6 md:px-10 py-24 md:py-32 border-t border-white/5"
+      className="relative px-5 sm:px-6 md:px-10 py-20 md:py-32 border-t border-white/5"
     >
       <div className="mx-auto w-full max-w-[1440px]">
         <Reveal>
-          <div className="mb-14 max-w-[680px]">
-            <p className="mb-3 text-[12px] uppercase tracking-[0.28em] text-[#a0a0a0]">
+          <div className="mb-10 md:mb-14 max-w-[680px]">
+            <p className="mb-3 text-[11px] sm:text-[12px] uppercase tracking-[0.28em] text-[#a0a0a0]">
               Aktuell · Building in Public
             </p>
-            <h2 className="heading-gradient text-[44px] md:text-[60px] font-medium leading-[1.05] tracking-[-0.06em]">
+            <h2 className="heading-gradient text-[36px] sm:text-[44px] md:text-[60px] font-medium leading-[1.05] tracking-[-0.06em]">
               Woran ich gerade arbeite.
             </h2>
-            <p className="mt-6 text-[16px] md:text-[18px] leading-[1.55] tracking-[-0.025em] text-[#878787]">
+            <p className="mt-5 md:mt-6 text-[15px] sm:text-[16px] md:text-[18px] leading-[1.6] md:leading-[1.55] tracking-[-0.025em] text-[#878787]">
               Mein Fokus liegt aktuell voll auf Nesani — und den Produkten,
               die wir unter diesem Dach aufbauen.
             </p>
@@ -76,7 +76,7 @@ export function VlogSection() {
             href="https://www.nesani.de"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative block overflow-hidden rounded-3xl bg-gradient-to-br from-white/[0.07] via-white/[0.04] to-white/[0.02] ring-1 ring-white/15 p-8 md:p-12 lg:p-14 mb-12 md:mb-16 transition-all duration-300 hover:ring-white/30 hover:from-white/[0.09] hover:via-white/[0.05]"
+            className="group relative block overflow-hidden rounded-2xl md:rounded-3xl bg-gradient-to-br from-white/[0.07] via-white/[0.04] to-white/[0.02] ring-1 ring-white/15 p-6 sm:p-8 md:p-12 lg:p-14 mb-10 md:mb-16 transition-all duration-300 hover:ring-white/30 hover:from-white/[0.09] hover:via-white/[0.05]"
           >
             {/* Subtle radial glow */}
             <div
@@ -84,26 +84,26 @@ export function VlogSection() {
               className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-white/10 blur-3xl transition-opacity duration-300 group-hover:bg-white/15"
             />
 
-            <div className="relative flex flex-col lg:flex-row gap-10 lg:gap-16 lg:items-end">
+            <div className="relative flex flex-col lg:flex-row gap-8 lg:gap-16 lg:items-end">
               <div className="flex-1 max-w-[640px]">
-                <div className="flex items-center gap-3 mb-6">
-                  <span className="inline-flex items-center rounded-full bg-white text-[#010101] px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em]">
+                <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-5 md:mb-6">
+                  <span className="inline-flex items-center rounded-full bg-white text-[#010101] px-3 py-1 text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.18em]">
                     Hauptprojekt
                   </span>
-                  <span className="text-[12px] uppercase tracking-[0.22em] text-[#a0a0a0]">
+                  <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.22em] text-[#a0a0a0]">
                     Studio · Aktiv
                   </span>
                 </div>
 
-                <h3 className="text-[48px] md:text-[64px] lg:text-[72px] font-medium leading-[0.95] tracking-[-0.06em] text-white mb-6">
+                <h3 className="text-[40px] sm:text-[48px] md:text-[64px] lg:text-[72px] font-medium leading-[0.95] tracking-[-0.06em] text-white mb-5 md:mb-6">
                   Nesani
                 </h3>
 
-                <p className="text-[18px] md:text-[20px] leading-[1.45] tracking-[-0.025em] text-white/85 mb-4">
+                <p className="text-[16px] sm:text-[18px] md:text-[20px] leading-[1.45] tracking-[-0.025em] text-white/85 mb-3 md:mb-4">
                   Das Studio hinter allem hier.
                 </p>
 
-                <p className="text-[15px] md:text-[16px] leading-[1.65] tracking-[-0.02em] text-[#a0a0a0]">
+                <p className="text-[14px] sm:text-[15px] md:text-[16px] leading-[1.65] tracking-[-0.02em] text-[#a0a0a0]">
                   Mit Nesani baue ich digitale Strukturen, KI-Integration und
                   autonome Systeme für ambitionierte Unternehmen im DACH-Raum.
                   Vom ersten Workshop bis zum Launch in Wochen — fokussiert auf
@@ -111,7 +111,7 @@ export function VlogSection() {
                   diesem Dach.
                 </p>
 
-                <span className="mt-8 inline-flex items-center gap-2 text-[14px] font-medium text-white/85 group-hover:text-white transition-colors">
+                <span className="mt-7 md:mt-8 inline-flex items-center gap-2 text-[13px] sm:text-[14px] font-medium text-white/85 group-hover:text-white transition-colors">
                   <span className="uppercase tracking-[0.2em]">
                     Zur Website
                   </span>
@@ -119,13 +119,13 @@ export function VlogSection() {
                 </span>
               </div>
 
-              <div className="grid grid-cols-3 gap-6 lg:gap-10 lg:min-w-[280px]">
+              <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-10 lg:min-w-[280px] pt-2 lg:pt-0 border-t lg:border-t-0 border-white/10 mt-2 lg:mt-0 -mx-1 sm:mx-0">
                 {stats.map((s) => (
-                  <div key={s.label}>
-                    <div className="text-[18px] md:text-[20px] font-medium tracking-[-0.025em] text-white">
+                  <div key={s.label} className="px-1 pt-4 lg:pt-0">
+                    <div className="text-[14px] sm:text-[18px] md:text-[20px] font-medium tracking-[-0.025em] text-white leading-tight">
                       {s.value}
                     </div>
-                    <div className="mt-1.5 text-[11px] uppercase tracking-[0.22em] text-[#878787]">
+                    <div className="mt-1 sm:mt-1.5 text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-[#878787]">
                       {s.label}
                     </div>
                   </div>
@@ -137,9 +137,9 @@ export function VlogSection() {
 
         {/* Subline */}
         <Reveal>
-          <div className="flex items-center gap-4 mb-8">
+          <div className="flex items-center gap-3 sm:gap-4 mb-6 md:mb-8">
             <span className="h-px flex-1 bg-white/10" />
-            <p className="text-[12px] uppercase tracking-[0.28em] text-[#a0a0a0]">
+            <p className="text-[10px] sm:text-[12px] uppercase tracking-[0.24em] sm:tracking-[0.28em] text-[#a0a0a0] text-center">
               Unter dem Dach von Nesani
             </p>
             <span className="h-px flex-1 bg-white/10" />
@@ -147,32 +147,32 @@ export function VlogSection() {
         </Reveal>
 
         {/* Sub-projects */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
           {subProjects.map((p, i) => (
             <Reveal key={p.title} delay={80 + i * 80}>
               <a
                 href={p.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white/[0.025] ring-1 ring-white/10 p-7 transition-all duration-300 hover:bg-white/[0.04] hover:ring-white/25 hover:-translate-y-0.5"
+                className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white/[0.025] ring-1 ring-white/10 p-6 md:p-7 transition-all duration-300 hover:bg-white/[0.04] hover:ring-white/25 hover:-translate-y-0.5"
               >
-                <div className="flex items-center gap-3 mb-5">
+                <div className="flex items-center gap-3 mb-4 md:mb-5">
                   <span
-                    className={`inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-medium uppercase tracking-[0.18em] ring-1 ${statusColor[p.status]}`}
+                    className={`inline-flex items-center rounded-full px-2.5 py-1 text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.18em] ring-1 ${statusColor[p.status]}`}
                   >
                     {p.status}
                   </span>
                 </div>
-                <p className="text-[12px] uppercase tracking-[0.22em] text-[#a0a0a0] mb-3">
+                <p className="text-[11px] sm:text-[12px] uppercase tracking-[0.22em] text-[#a0a0a0] mb-2 md:mb-3">
                   {p.category}
                 </p>
-                <h4 className="text-[24px] md:text-[26px] font-medium leading-[1.05] tracking-[-0.04em] text-white">
+                <h4 className="text-[22px] sm:text-[24px] md:text-[26px] font-medium leading-[1.05] tracking-[-0.04em] text-white">
                   {p.title}
                 </h4>
-                <p className="mt-4 text-[14.5px] leading-[1.6] tracking-[-0.02em] text-[#878787]">
+                <p className="mt-3 md:mt-4 text-[14px] sm:text-[14.5px] leading-[1.6] tracking-[-0.02em] text-[#878787]">
                   {p.description}
                 </p>
-                <span className="mt-auto pt-6 inline-flex items-center gap-2 text-[13px] font-medium text-white/80 group-hover:text-white transition-colors">
+                <span className="mt-auto pt-5 md:pt-6 inline-flex items-center gap-2 text-[13px] font-medium text-white/80 group-hover:text-white transition-colors">
                   Zur Seite
                   <ArrowUpRightIcon className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </span>
