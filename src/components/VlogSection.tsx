@@ -72,11 +72,16 @@ export function VlogSection() {
 
         {/* Nesani — Hauptprojekt */}
         <Reveal delay={80}>
-          <article className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/[0.07] via-white/[0.04] to-white/[0.02] ring-1 ring-white/15 p-8 md:p-12 lg:p-14 mb-12 md:mb-16">
+          <a
+            href="https://www.nesani.de"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative block overflow-hidden rounded-3xl bg-gradient-to-br from-white/[0.07] via-white/[0.04] to-white/[0.02] ring-1 ring-white/15 p-8 md:p-12 lg:p-14 mb-12 md:mb-16 transition-all duration-300 hover:ring-white/30 hover:from-white/[0.09] hover:via-white/[0.05]"
+          >
             {/* Subtle radial glow */}
             <div
               aria-hidden
-              className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-white/10 blur-3xl"
+              className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-white/10 blur-3xl transition-opacity duration-300 group-hover:bg-white/15"
             />
 
             <div className="relative flex flex-col lg:flex-row gap-10 lg:gap-16 lg:items-end">
@@ -106,12 +111,12 @@ export function VlogSection() {
                   diesem Dach.
                 </p>
 
-                <div className="mt-8 inline-flex items-center gap-2 text-[14px] text-white/80">
-                  <span className="h-px w-8 bg-white/30" />
+                <span className="mt-8 inline-flex items-center gap-2 text-[14px] font-medium text-white/85 group-hover:text-white transition-colors">
                   <span className="uppercase tracking-[0.2em]">
-                    Mehr in Kürze
+                    Zur Website
                   </span>
-                </div>
+                  <ArrowUpRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </span>
               </div>
 
               <div className="grid grid-cols-3 gap-6 lg:gap-10 lg:min-w-[280px]">
@@ -127,7 +132,7 @@ export function VlogSection() {
                 ))}
               </div>
             </div>
-          </article>
+          </a>
         </Reveal>
 
         {/* Subline */}
