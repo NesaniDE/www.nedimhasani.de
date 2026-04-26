@@ -1,4 +1,5 @@
 import { ArrowRightIcon } from "@/components/icons";
+import { Reveal } from "@/components/Reveal";
 
 type Project = {
   status: "Live" | "Beta" | "In Arbeit" | "Aktiv";
@@ -52,25 +53,27 @@ export function VlogSection() {
       className="relative px-6 md:px-10 py-24 md:py-32 border-t border-white/5"
     >
       <div className="mx-auto w-full max-w-[1440px]">
-        <div className="mb-14 max-w-[680px]">
-          <p className="mb-3 text-[12px] uppercase tracking-[0.28em] text-[#a0a0a0]">
-            Aktuell · Building in Public
-          </p>
-          <h2 className="heading-gradient text-[44px] md:text-[60px] font-medium leading-[1.05] tracking-[-0.06em]">
-            Woran ich gerade arbeite.
-          </h2>
-          <p className="mt-6 text-[16px] md:text-[18px] leading-[1.55] tracking-[-0.025em] text-[#878787]">
-            Vier parallele Wetten auf unterschiedliche Probleme. Manche sind
-            live, manche noch in der Private Beta — alle entstehen unter dem
-            Dach von Nesani.
-          </p>
-        </div>
+        <Reveal>
+          <div className="mb-14 max-w-[680px]">
+            <p className="mb-3 text-[12px] uppercase tracking-[0.28em] text-[#a0a0a0]">
+              Aktuell · Building in Public
+            </p>
+            <h2 className="heading-gradient text-[44px] md:text-[60px] font-medium leading-[1.05] tracking-[-0.06em]">
+              Woran ich gerade arbeite.
+            </h2>
+            <p className="mt-6 text-[16px] md:text-[18px] leading-[1.55] tracking-[-0.025em] text-[#878787]">
+              Vier parallele Wetten auf unterschiedliche Probleme. Manche sind
+              live, manche noch in der Private Beta — alle entstehen unter dem
+              Dach von Nesani.
+            </p>
+          </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {projects.map((p) => (
+          {projects.map((p, i) => (
+            <Reveal key={p.title} delay={80 + i * 80}>
             <article
-              key={p.title}
-              className="group relative overflow-hidden rounded-2xl bg-white/[0.025] ring-1 ring-white/10 p-8 transition-all hover:bg-white/[0.04] hover:ring-white/20"
+              className="group relative overflow-hidden rounded-2xl bg-white/[0.025] ring-1 ring-white/10 p-8 transition-all duration-300 hover:bg-white/[0.04] hover:ring-white/20 hover:-translate-y-0.5"
             >
               <div className="flex items-center gap-3 mb-6">
                 <span
@@ -90,9 +93,10 @@ export function VlogSection() {
               </p>
               <span className="mt-7 inline-flex items-center gap-2 text-[14px] text-white/70 group-hover:text-white transition-colors">
                 Mehr bald
-                <ArrowRightIcon className="h-3.5 w-3.5" />
+                <ArrowRightIcon className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
               </span>
             </article>
+            </Reveal>
           ))}
         </div>
       </div>

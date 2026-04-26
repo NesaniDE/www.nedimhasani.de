@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { Reveal } from "@/components/Reveal";
 
 export function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
@@ -17,25 +18,32 @@ export function ContactSection() {
     >
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
         <div className="max-w-[520px]">
-          <h2 className="heading-gradient text-[44px] md:text-[60px] font-medium leading-[1] tracking-[-0.06em] mb-8">
-            Lass uns reden!
-          </h2>
-          <h4 className="text-[20px] md:text-[22px] leading-[1.22] tracking-[-0.025em] text-white mb-8">
-            Egal ob Projekt, Frage oder einfach nur Hallo — das Postfach ist
-            offen.
-          </h4>
-          <p className="text-[15px] text-[#a0a0a0]">
-            Oder direkt per E-Mail:{" "}
-            <a
-              href="mailto:info@nedimhasani.de"
-              className="text-white hover:underline"
-            >
-              info@nedimhasani.de
-            </a>
-          </p>
+          <Reveal>
+            <h2 className="heading-gradient text-[44px] md:text-[60px] font-medium leading-[1] tracking-[-0.06em] mb-8">
+              Lass uns reden!
+            </h2>
+          </Reveal>
+          <Reveal delay={80}>
+            <h4 className="text-[20px] md:text-[22px] leading-[1.22] tracking-[-0.025em] text-white mb-8">
+              Egal ob Projekt, Frage oder einfach nur Hallo — das Postfach ist
+              offen.
+            </h4>
+          </Reveal>
+          <Reveal delay={160}>
+            <p className="text-[15px] text-[#a0a0a0]">
+              Oder direkt per E-Mail:{" "}
+              <a
+                href="mailto:info@nedimhasani.de"
+                className="text-white hover:underline"
+              >
+                info@nedimhasani.de
+              </a>
+            </p>
+          </Reveal>
         </div>
 
-        <form onSubmit={handleSubmit} className="w-full max-w-[600px]">
+        <Reveal delay={120} className="w-full max-w-[600px]">
+        <form onSubmit={handleSubmit} className="w-full">
           {submitted ? (
             <div className="rounded-2xl bg-white/[0.04] ring-1 ring-white/10 p-8">
               <p className="text-white text-lg">
@@ -88,6 +96,7 @@ export function ContactSection() {
             </>
           )}
         </form>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Onest } from "next/font/google";
+import { CookieBanner } from "@/components/CookieBanner";
 import "./globals.css";
 
 const onest = Onest({
@@ -37,7 +38,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className={`${onest.variable} antialiased`}>
-      <body className="bg-background text-foreground min-h-screen">{children}</body>
+      <body className="bg-background text-foreground min-h-screen">
+        {children}
+        <CookieBanner />
+      </body>
     </html>
   );
 }
