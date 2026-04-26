@@ -22,7 +22,6 @@ export function Hero() {
     >
       <div className="bg-radial-glow pointer-events-none absolute inset-0" />
 
-      {/* Sticky portrait + huge bg name */}
       <div className="absolute inset-0 flex items-end justify-center pointer-events-none">
         <h1 className="bg-name absolute bottom-0 text-[15vw] md:text-[18vw] lg:text-[230px] leading-[0.9] z-0 select-none">
           Nedim Hasani
@@ -35,15 +34,13 @@ export function Hero() {
           priority
           className="relative z-10 h-[88vh] w-auto max-h-[820px] object-contain object-bottom"
         />
-        {/* Bottom fade so the portrait dissolves into the page */}
         <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#010101] to-transparent z-20" />
       </div>
 
-      {/* Mission text — top-left */}
       <div className="relative z-30 mx-auto flex h-full w-full max-w-[1440px] flex-col px-6 md:px-10 pt-32 md:pt-36">
-        <p className="max-w-xs md:max-w-[400px] text-[20px] md:text-[26px] lg:text-[30px] leading-[1.13] tracking-[-0.03em] text-[#878787]">
-          Personal page of Nedim Hasani — building digital products,
-          experimenting with AI, and shipping ideas worth keeping.
+        <p className="max-w-xs md:max-w-[420px] text-[20px] md:text-[26px] lg:text-[30px] leading-[1.13] tracking-[-0.03em] text-[#878787]">
+          Founder of Nesani. Building software, web and app products — for
+          ambitious brands and the people behind them.
         </p>
 
         <div className="mt-auto mb-10 flex items-center gap-7">
