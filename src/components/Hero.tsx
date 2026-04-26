@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   GithubIcon,
@@ -17,16 +18,29 @@ export function Hero() {
   return (
     <section
       id="start"
-      className="relative h-screen min-h-[680px] overflow-hidden flex items-center"
+      className="relative h-screen min-h-[680px] overflow-hidden"
     >
       <div className="bg-radial-glow pointer-events-none absolute inset-0" />
 
-      {/* Massive background name */}
-      <h1 className="bg-name absolute -bottom-2 left-0 right-0 text-[15vw] md:text-[18vw] lg:text-[230px] leading-[0.85] text-center select-none pointer-events-none z-0 px-4">
-        Nedim Hasani
-      </h1>
+      {/* Sticky portrait + huge bg name */}
+      <div className="absolute inset-0 flex items-end justify-center pointer-events-none">
+        <h1 className="bg-name absolute bottom-0 text-[15vw] md:text-[18vw] lg:text-[230px] leading-[0.9] z-0 select-none">
+          Nedim Hasani
+        </h1>
+        <Image
+          src="/images/nedim.png"
+          alt="Nedim Hasani portrait"
+          width={1402}
+          height={1122}
+          priority
+          className="relative z-10 h-[88vh] w-auto max-h-[820px] object-contain object-bottom"
+        />
+        {/* Bottom fade so the portrait dissolves into the page */}
+        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#010101] to-transparent z-20" />
+      </div>
 
-      <div className="relative z-10 mx-auto flex h-full w-full max-w-[1440px] flex-col px-6 md:px-10 pt-32 md:pt-36">
+      {/* Mission text — top-left */}
+      <div className="relative z-30 mx-auto flex h-full w-full max-w-[1440px] flex-col px-6 md:px-10 pt-32 md:pt-36">
         <p className="max-w-xs md:max-w-[400px] text-[20px] md:text-[26px] lg:text-[30px] leading-[1.13] tracking-[-0.03em] text-[#878787]">
           Personal page of Nedim Hasani — building digital products,
           experimenting with AI, and shipping ideas worth keeping.
@@ -47,8 +61,6 @@ export function Hero() {
           ))}
         </div>
       </div>
-
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#010101] to-transparent z-10 pointer-events-none" />
     </section>
   );
 }
