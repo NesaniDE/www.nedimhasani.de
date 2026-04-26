@@ -32,7 +32,7 @@ export function Hero() {
           width={1402}
           height={1122}
           priority
-          className="portrait-soft relative z-10 h-[100vh] w-auto max-h-[1040px] object-contain object-bottom"
+          className="portrait-soft relative z-10 h-[90vh] w-auto max-h-[936px] object-contain object-bottom"
         />
         <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#010101] via-[#010101]/80 to-transparent z-20" />
       </div>
