@@ -93,8 +93,8 @@ export function HeroAbout() {
               <Image
                 src="/images/nedim.png"
                 alt="Nedim Hasani Portrait"
-                width={1402}
-                height={1122}
+                width={658}
+                height={1057}
                 priority
                 className="portrait-soft relative z-10 h-full w-auto object-contain object-bottom animate-hero-portrait"
               />

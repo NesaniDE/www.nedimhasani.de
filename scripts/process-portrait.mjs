@@ -9,13 +9,15 @@ const DEST = join(BASE, "public/images/nedim.png");
 await mkdir(dirname(DEST), { recursive: true });
 
 await sharp(SRC)
+  // Crop the empty transparent canvas around the person so the photo fills
+  // its container instead of leaving a tall empty band above the head.
+  .trim({ background: { r: 0, g: 0, b: 0, alpha: 0 }, threshold: 4 })
   .grayscale()
-  // softer tonality: mild contrast, slight lift in midtones
   .linear(0.96, 6)
   .modulate({ brightness: 1.02 })
-  // very gentle blur to take the edge off without losing detail
   .blur(0.4)
   .png({ compressionLevel: 9, palette: false })
   .toFile(DEST);
 
-console.log("✓ wrote", DEST);
+const meta = await sharp(DEST).metadata();
+console.log(`✓ wrote ${DEST} (${meta.width}x${meta.height})`);
