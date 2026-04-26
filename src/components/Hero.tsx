@@ -3,13 +3,15 @@ import Link from "next/link";
 import {
   InstagramIcon,
   LinkedInIcon,
-  XIcon,
+  TikTokIcon,
+  YouTubeIcon,
 } from "@/components/icons";
 
 const socials = [
-  { Icon: LinkedInIcon, href: "#", label: "LinkedIn" },
-  { Icon: InstagramIcon, href: "#", label: "Instagram" },
-  { Icon: XIcon, href: "#", label: "X" },
+  { Icon: LinkedInIcon, href: "https://www.linkedin.com/in/nedimhasani", label: "LinkedIn" },
+  { Icon: InstagramIcon, href: "https://www.instagram.com/nedimhasani", label: "Instagram" },
+  { Icon: TikTokIcon, href: "https://www.tiktok.com/@nedimhasani", label: "TikTok" },
+  { Icon: YouTubeIcon, href: "https://www.youtube.com/@nedimhasani", label: "YouTube" },
 ];
 
 export function Hero() {
