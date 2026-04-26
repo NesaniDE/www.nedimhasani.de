@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  GithubIcon,
   InstagramIcon,
   LinkedInIcon,
   XIcon,
@@ -11,7 +10,6 @@ const socials = [
   { Icon: LinkedInIcon, href: "#", label: "LinkedIn" },
   { Icon: InstagramIcon, href: "#", label: "Instagram" },
   { Icon: XIcon, href: "#", label: "X" },
-  { Icon: GithubIcon, href: "#", label: "GitHub" },
 ];
 
 export function Hero() {

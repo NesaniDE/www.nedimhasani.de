@@ -3,7 +3,6 @@
 import Link from "next/link";
 import {
   ArrowUpIcon,
-  GithubIcon,
   InstagramIcon,
   LinkedInIcon,
   XIcon,
@@ -13,7 +12,6 @@ const socials = [
   { Icon: LinkedInIcon, href: "#", label: "LinkedIn" },
   { Icon: InstagramIcon, href: "#", label: "Instagram" },
   { Icon: XIcon, href: "#", label: "X" },
-  { Icon: GithubIcon, href: "#", label: "GitHub" },
 ];
 
 export function Footer() {
