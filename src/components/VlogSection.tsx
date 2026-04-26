@@ -1,4 +1,4 @@
-import { ArrowRightIcon } from "@/components/icons";
+import { ArrowUpRightIcon } from "@/components/icons";
 import { Reveal } from "@/components/Reveal";
 
 type SubProject = {
@@ -6,6 +6,7 @@ type SubProject = {
   category: string;
   title: string;
   description: string;
+  href: string;
 };
 
 const subProjects: SubProject[] = [
@@ -15,6 +16,7 @@ const subProjects: SubProject[] = [
     title: "GD-Listen",
     description:
       "Kuratierte Top-10-Listen für Schwäbisch Gmünd — der erste Guide, den Einheimische wirklich nutzen. Restaurants, Cafés, Wochenend-Spots, ehrlich gerankt und laufend aktualisiert.",
+    href: "https://gd-listen-two.vercel.app",
   },
   {
     status: "In Arbeit",
@@ -22,6 +24,7 @@ const subProjects: SubProject[] = [
     title: "BEM-Marktplatz",
     description:
       "Ein Marktplatz, auf dem KI-Agenten echte Menschen für reale Aufgaben beauftragen. Mit eigenem MCP-Server, sodass Agenten Aufträge posten, tracken und auszahlen können.",
+    href: "https://bem-marktplatz-theta.vercel.app",
   },
   {
     status: "In Arbeit",
@@ -29,6 +32,7 @@ const subProjects: SubProject[] = [
     title: "Nesani Editor",
     description:
       "KI-gestützte Websitepflege. Kunden ändern ihre Website per Chat, sehen eine Live-Vorschau und veröffentlichen erst nach Freigabe. Next.js 16 + Supabase im Hintergrund.",
+    href: "https://nesani-editor.vercel.app",
   },
 ];
 
@@ -141,7 +145,12 @@ export function VlogSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {subProjects.map((p, i) => (
             <Reveal key={p.title} delay={80 + i * 80}>
-              <article className="group relative h-full overflow-hidden rounded-2xl bg-white/[0.025] ring-1 ring-white/10 p-7 transition-all duration-300 hover:bg-white/[0.04] hover:ring-white/20 hover:-translate-y-0.5">
+              <a
+                href={p.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white/[0.025] ring-1 ring-white/10 p-7 transition-all duration-300 hover:bg-white/[0.04] hover:ring-white/25 hover:-translate-y-0.5"
+              >
                 <div className="flex items-center gap-3 mb-5">
                   <span
                     className={`inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-medium uppercase tracking-[0.18em] ring-1 ${statusColor[p.status]}`}
@@ -158,11 +167,11 @@ export function VlogSection() {
                 <p className="mt-4 text-[14.5px] leading-[1.6] tracking-[-0.02em] text-[#878787]">
                   {p.description}
                 </p>
-                <span className="mt-6 inline-flex items-center gap-2 text-[13px] text-white/70 group-hover:text-white transition-colors">
-                  Mehr bald
-                  <ArrowRightIcon className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                <span className="mt-auto pt-6 inline-flex items-center gap-2 text-[13px] font-medium text-white/80 group-hover:text-white transition-colors">
+                  Zur Seite
+                  <ArrowUpRightIcon className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </span>
-              </article>
+              </a>
             </Reveal>
           ))}
         </div>
