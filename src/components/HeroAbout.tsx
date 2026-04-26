@@ -77,15 +77,20 @@ export function HeroAbout() {
       `}</style>
       <div className="lg:grid lg:grid-cols-12">
         {/* Left column — sticky photo + name + mission */}
-        <div className="relative h-screen min-h-[760px] overflow-hidden lg:col-span-7 lg:sticky lg:top-0 lg:h-screen">
+        <div className="relative h-screen min-h-[760px] overflow-hidden lg:col-span-7 lg:sticky lg:top-0 lg:h-screen lg:overflow-visible">
           <div className="bg-radial-glow pointer-events-none absolute inset-0" />
 
-          {/* Photo + big bg-name. Slide from page-center to col-center. */}
-          <div ref={dockRef} className="hero-dock absolute inset-0 pointer-events-none">
-            <h1 className="bg-name absolute bottom-0 left-0 right-0 text-center text-[15vw] md:text-[18vw] lg:text-[16vw] xl:text-[15vw] leading-[0.9] z-0 select-none animate-hero-name">
-              Nedim Hasani
-            </h1>
+          {/* Big bg-name — spans the FULL viewport, anchored to section
+              bottom. Doesn't shift with the dock so the right half of the
+              screen is filled with the giant typography from the start. */}
+          <h1
+            className="bg-name absolute bottom-0 left-0 right-0 lg:right-[-71.4%] text-center text-[15vw] md:text-[18vw] lg:text-[18vw] xl:text-[18vw] leading-[0.9] z-0 select-none animate-hero-name pointer-events-none"
+          >
+            Nedim Hasani
+          </h1>
 
+          {/* Photo. Slides from page-center back to col-center on scroll. */}
+          <div ref={dockRef} className="hero-dock absolute inset-0 pointer-events-none">
             <div
               className="absolute inset-x-0 bottom-0 flex items-end justify-center"
               style={{ top: NAV_HEIGHT }}
