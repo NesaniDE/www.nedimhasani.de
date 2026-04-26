@@ -45,20 +45,14 @@ export function Footer() {
 
         <div className="flex items-center gap-6">
           <Link
-            href="#imprint"
+            href="/imprint"
             className="text-[14px] tracking-[-0.025em] text-[#a0a0a0] hover:text-white transition-colors"
           >
-            Imprint
-          </Link>
-          <Link
-            href="#privacy"
-            className="text-[14px] tracking-[-0.025em] text-[#a0a0a0] hover:text-white transition-colors"
-          >
-            Privacy
+            Impressum
           </Link>
           <button
             onClick={scrollTop}
-            aria-label="Back to top"
+            aria-label="Nach oben"
             className="text-[#a0a0a0] hover:text-white transition-colors"
             type="button"
           >

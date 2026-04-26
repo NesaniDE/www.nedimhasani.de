@@ -12,7 +12,8 @@ const onest = Onest({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.nedimhasani.de"),
   title: "Nedim Hasani",
-  description: "Personal page of Nedim Hasani.",
+  description:
+    "Persönliche Seite von Nedim Hasani — Gründer von Nesani. Software, Web und App.",
   icons: {
     icon: [
       { url: "/seo/favicon-32x32.png", sizes: "32x32" },
@@ -22,7 +23,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Nedim Hasani",
-    description: "Personal page of Nedim Hasani.",
+    description:
+      "Persönliche Seite von Nedim Hasani — Gründer von Nesani. Software, Web und App.",
+    locale: "de_DE",
     type: "website",
   },
 };
@@ -33,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${onest.variable} antialiased`}>
+    <html lang="de" className={`${onest.variable} antialiased`}>
       <body className="bg-background text-foreground min-h-screen">{children}</body>
     </html>
   );

@@ -18,7 +18,7 @@ export function Hero() {
   return (
     <section
       id="start"
-      className="relative h-screen min-h-[680px] overflow-hidden"
+      className="relative h-screen min-h-[760px] overflow-hidden"
     >
       <div className="bg-radial-glow pointer-events-none absolute inset-0" />
 
@@ -28,19 +28,20 @@ export function Hero() {
         </h1>
         <Image
           src="/images/nedim.png"
-          alt="Nedim Hasani portrait"
+          alt="Nedim Hasani Portrait"
           width={1402}
           height={1122}
           priority
-          className="portrait-soft relative z-10 h-[90vh] w-auto max-h-[936px] object-contain object-bottom"
+          className="portrait-soft relative z-10 h-[112vh] w-auto max-h-[1180px] object-contain object-bottom"
         />
-        <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#010101] via-[#010101]/80 to-transparent z-20" />
+        {/* Bottom fade — pushed lower so more of the portrait reads */}
+        <div className="absolute -bottom-12 left-0 right-0 h-40 bg-gradient-to-t from-[#010101] via-[#010101]/85 to-transparent z-20" />
       </div>
 
       <div className="relative z-30 mx-auto flex h-full w-full max-w-[1440px] flex-col px-6 md:px-10 pt-32 md:pt-36">
         <p className="max-w-xs md:max-w-[420px] text-[20px] md:text-[26px] lg:text-[30px] leading-[1.13] tracking-[-0.03em] text-[#878787]">
-          Founder of Nesani. Building software, web and app products — for
-          ambitious brands and the people behind them.
+          Gründer von Nesani. Ich baue Software-, Web- und App-Produkte — für
+          ambitionierte Marken und die Menschen dahinter.
         </p>
 
         <div className="mt-auto mb-10 flex items-center gap-7">

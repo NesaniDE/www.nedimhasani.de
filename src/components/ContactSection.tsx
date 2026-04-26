@@ -18,19 +18,19 @@ export function ContactSection() {
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
         <div className="max-w-[520px]">
           <h2 className="heading-gradient text-[44px] md:text-[60px] font-medium leading-[1] tracking-[-0.06em] mb-8">
-            Let&rsquo;s connect!
+            Lass uns reden!
           </h2>
           <h4 className="text-[20px] md:text-[22px] leading-[1.22] tracking-[-0.025em] text-white mb-8">
-            Whether it&rsquo;s a project, a question, or a quick hello — the
-            inbox is open.
+            Egal ob Projekt, Frage oder einfach nur Hallo — das Postfach ist
+            offen.
           </h4>
           <p className="text-[15px] text-[#a0a0a0]">
-            Or drop a line directly:{" "}
+            Oder direkt per E-Mail:{" "}
             <a
-              href="mailto:nedimhasani04@gmail.com"
+              href="mailto:info@nedimhasani.de"
               className="text-white hover:underline"
             >
-              nedimhasani04@gmail.com
+              info@nedimhasani.de
             </a>
           </p>
         </div>
@@ -39,7 +39,7 @@ export function ContactSection() {
           {submitted ? (
             <div className="rounded-2xl bg-white/[0.04] ring-1 ring-white/10 p-8">
               <p className="text-white text-lg">
-                Thanks for reaching out — I&rsquo;ll get back to you soon.
+                Danke für deine Nachricht — ich melde mich zeitnah bei dir.
               </p>
             </div>
           ) : (
@@ -54,13 +54,13 @@ export function ContactSection() {
               <input
                 type="email"
                 name="email"
-                placeholder="Email*"
+                placeholder="E-Mail*"
                 required
                 className="ag-input mb-[18px]"
               />
               <textarea
                 name="message"
-                placeholder="Message*"
+                placeholder="Worum geht's? Kurz beschreiben.*"
                 required
                 rows={5}
                 className="ag-input mb-6 resize-none"
@@ -75,13 +75,14 @@ export function ContactSection() {
                     className="mt-1 h-4 w-4 shrink-0 rounded-full border border-white/40 bg-transparent appearance-none checked:bg-white checked:border-white cursor-pointer"
                   />
                   <span className="text-[11px] leading-snug tracking-[-0.02em] text-[#878787]">
-                    I have read the privacy policy and agree that my data may be
-                    stored to process this request.
+                    Ich habe die Datenschutzerklärung gelesen und bin
+                    einverstanden, dass meine Angaben elektronisch gespeichert
+                    werden, um meine Anfrage zu bearbeiten.
                   </span>
                 </label>
 
                 <button type="submit" className="pill-button shrink-0">
-                  Submit
+                  Senden
                 </button>
               </div>
             </>

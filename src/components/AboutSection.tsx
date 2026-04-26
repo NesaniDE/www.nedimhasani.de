@@ -5,41 +5,43 @@ export function AboutSection() {
         <div className="hidden lg:block" />
         <div className="max-w-[560px]">
           <h2 className="heading-gradient text-[44px] md:text-[60px] font-medium leading-[1] tracking-[-0.06em] mb-10">
-            About
+            Über mich
           </h2>
 
           <h4 className="text-[20px] md:text-[22px] leading-[1.32] tracking-[-0.025em] text-white mb-8">
-            Hi, I&rsquo;m Nedim — founder of Nesani and a software builder
-            with years of work behind me in web, mobile and product
-            engineering.
+            Hi, ich bin Nedim — Gründer von Nesani und seit Jahren als
+            Software-Entwickler in Web, Mobile und Produkt-Engineering
+            unterwegs.
           </h4>
 
           <div className="space-y-6 text-[16px] md:text-[18px] leading-[1.55] tracking-[-0.025em] text-[#878787]">
             <p>
-              I studied Computer Science at the University of Stuttgart and
-              have been shipping digital products ever since — from custom web
-              platforms and mobile apps to internal tools and full-stack
-              software for growing companies.
+              Mein Studium der Informatik habe ich an der Universität Stuttgart
+              abgeschlossen und seitdem digitale Produkte gebaut — von Custom
+              Web-Plattformen und Mobile-Apps bis hin zu internen Tools und
+              Full-Stack-Software für wachsende Unternehmen.
             </p>
             <p>
-              Earlier on, I had the chance to contribute to projects under{" "}
-              <span className="text-white">Christian Jungwirth Management</span>
-              , which along the way put me in touch with brands like{" "}
+              Früher in meiner Laufbahn durfte ich an Projekten unter{" "}
+              <span className="text-white">Christian Jungwirth Management</span>{" "}
+              mitwirken, wodurch ich auch mit Marken wie{" "}
               <span className="text-white">ESN</span>,{" "}
-              <span className="text-white">Jako</span> and{" "}
-              <span className="text-white">Oktagon&nbsp;MMA</span> — a
-              formative chapter that shaped how I think about clients today.
+              <span className="text-white">Jako</span> und{" "}
+              <span className="text-white">Oktagon&nbsp;MMA</span> in Berührung
+              kam — eine prägende Phase, die meinen Blick auf Kundenarbeit bis
+              heute formt.
             </p>
             <p>
-              These days my focus is{" "}
-              <span className="text-white">Nesani</span>, where I build digital
-              structures, AI integration and autonomous systems for modern
-              companies. The personal projects you&rsquo;ll see here are the
-              side of that work that doesn&rsquo;t fit a client brief.
+              Heute liegt mein Fokus auf{" "}
+              <span className="text-white">Nesani</span>, wo ich digitale
+              Strukturen, KI-Integration und autonome Systeme für moderne
+              Unternehmen baue. Die persönlichen Projekte, die du hier siehst,
+              sind die Seite meiner Arbeit, die in keinen Kunden-Brief passt.
             </p>
             <p>
-              If you&rsquo;d like to talk about a project, an idea, or just say
-              hi — drop me a message below.
+              Wenn du über ein Projekt sprechen willst, eine Idee hast oder
+              einfach nur Hallo sagen möchtest — schreib mir unten eine
+              Nachricht.
             </p>
           </div>
         </div>

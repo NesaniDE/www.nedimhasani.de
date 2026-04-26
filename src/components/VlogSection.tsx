@@ -1,49 +1,48 @@
 import { ArrowRightIcon } from "@/components/icons";
 
 type Project = {
-  status: "Live" | "Beta" | "Building" | "Operating";
+  status: "Live" | "Beta" | "In Arbeit" | "Aktiv";
   category: string;
   title: string;
   description: string;
-  href?: string;
 };
 
 const projects: Project[] = [
   {
-    status: "Operating",
-    category: "Company",
+    status: "Aktiv",
+    category: "Unternehmen",
     title: "Nesani UG",
     description:
-      "The studio behind everything below. We build digital structures, AI integration and autonomous systems for ambitious companies in the DACH region — from idea to launch in weeks, not months.",
+      "Das Studio hinter allem hier. Wir bauen digitale Strukturen, KI-Integration und autonome Systeme für ambitionierte Unternehmen im DACH-Raum — von der Idee bis zum Launch in Wochen statt Monaten.",
   },
   {
     status: "Beta",
-    category: "Local · SaaS",
+    category: "Lokal · SaaS",
     title: "GD-Listen",
     description:
-      "Curated top-10 lists for Schwäbisch Gmünd — the first guide locals actually use. Restaurants, cafés, weekend spots and small businesses, ranked honestly and updated continuously.",
+      "Kuratierte Top-10-Listen für Schwäbisch Gmünd — der erste Guide, den Einheimische wirklich nutzen. Restaurants, Cafés, Wochenend-Spots und kleine Betriebe, ehrlich gerankt und laufend aktualisiert.",
   },
   {
-    status: "Building",
-    category: "Marketplace · AI",
+    status: "In Arbeit",
+    category: "Marktplatz · KI",
     title: "BEM-Marktplatz",
     description:
-      "A marketplace where AI agents hire real humans for real-world tasks. Comes with its own MCP server so any agent can post a job, track progress and pay out — bridging autonomous systems with the people on the ground.",
+      "Ein Marktplatz, auf dem KI-Agenten echte Menschen für reale Aufgaben beauftragen. Mit eigenem MCP-Server, sodass jeder Agent Aufträge posten, den Fortschritt tracken und auszahlen kann — die Brücke zwischen autonomen Systemen und den Menschen vor Ort.",
   },
   {
-    status: "Building",
-    category: "Product · AI",
+    status: "In Arbeit",
+    category: "Produkt · KI",
     title: "Nesani Editor",
     description:
-      "AI-powered website maintenance. Clients edit their site by chat, see a live preview, and only push to production after they hit approve. Next.js 16 + Supabase under the hood.",
+      "KI-gestützte Websitepflege. Kunden ändern ihre Website per Chat, sehen eine Live-Vorschau und veröffentlichen erst nach Freigabe. Next.js 16 + Supabase im Hintergrund.",
   },
 ];
 
 const statusColor: Record<Project["status"], string> = {
   Live: "bg-emerald-400/15 text-emerald-300 ring-emerald-400/30",
   Beta: "bg-amber-400/15 text-amber-200 ring-amber-400/30",
-  Building: "bg-sky-400/15 text-sky-200 ring-sky-400/30",
-  Operating: "bg-white/10 text-white ring-white/20",
+  "In Arbeit": "bg-sky-400/15 text-sky-200 ring-sky-400/30",
+  Aktiv: "bg-white/10 text-white ring-white/20",
 };
 
 export function VlogSection() {
@@ -55,14 +54,15 @@ export function VlogSection() {
       <div className="mx-auto w-full max-w-[1440px]">
         <div className="mb-14 max-w-[680px]">
           <p className="mb-3 text-[12px] uppercase tracking-[0.28em] text-[#a0a0a0]">
-            Now · Building in Public
+            Aktuell · Building in Public
           </p>
           <h2 className="heading-gradient text-[44px] md:text-[60px] font-medium leading-[1.05] tracking-[-0.06em]">
-            What I&rsquo;m working on right now.
+            Woran ich gerade arbeite.
           </h2>
           <p className="mt-6 text-[16px] md:text-[18px] leading-[1.55] tracking-[-0.025em] text-[#878787]">
-            Four parallel bets on different problems. Some are live, some
-            still in private beta — all built under the Nesani roof.
+            Vier parallele Wetten auf unterschiedliche Probleme. Manche sind
+            live, manche noch in der Private Beta — alle entstehen unter dem
+            Dach von Nesani.
           </p>
         </div>
 
@@ -89,7 +89,7 @@ export function VlogSection() {
                 {p.description}
               </p>
               <span className="mt-7 inline-flex items-center gap-2 text-[14px] text-white/70 group-hover:text-white transition-colors">
-                More soon
+                Mehr bald
                 <ArrowRightIcon className="h-3.5 w-3.5" />
               </span>
             </article>
