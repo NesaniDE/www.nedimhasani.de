@@ -43,12 +43,12 @@ export function CookieBanner() {
         </p>
         <p className="mt-2 text-[13px] leading-[1.55] tracking-[-0.02em] text-[#878787]">
           Technisch notwendige Cookies sind immer aktiv. Optionale Cookies
-          helfen mir, die Seite zu verbessern. Mehr im{" "}
+          helfen mir, die Seite zu verbessern. Mehr in der{" "}
           <Link
-            href="/imprint"
+            href="/datenschutz"
             className="text-white hover:underline underline-offset-4"
           >
-            Impressum
+            Datenschutzerklärung
           </Link>
           .
         </p>

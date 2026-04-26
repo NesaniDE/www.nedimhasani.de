@@ -50,6 +50,12 @@ export function Footer() {
           >
             Impressum
           </Link>
+          <Link
+            href="/datenschutz"
+            className="text-[14px] tracking-[-0.025em] text-[#a0a0a0] hover:text-white transition-colors"
+          >
+            Datenschutz
+          </Link>
           <button
             onClick={scrollTop}
             aria-label="Nach oben"
