@@ -10,8 +10,16 @@ export default function Home() {
     <>
       <Header />
       <main className="relative">
-        <Hero />
-        <AboutSection />
+        {/*
+          Combined hero + about section. On desktop the Hero is the sticky
+          left column (7/12) and AboutSection is the scrolling right column
+          (5/12) — so the portrait stays pinned while the bio rolls up next
+          to it. On mobile both stack normally.
+        */}
+        <section id="hero-about" className="relative lg:grid lg:grid-cols-12 lg:gap-0">
+          <Hero />
+          <AboutSection />
+        </section>
         <VlogSection />
         <ContactSection />
       </main>

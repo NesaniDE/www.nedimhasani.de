@@ -14,23 +14,26 @@ const socials = [
   { Icon: YouTubeIcon, href: "https://www.youtube.com/@nedimhasani", label: "YouTube" },
 ];
 
-// height of the fixed header — keeps the portrait's head below it
 const NAV_HEIGHT = 80;
 
+/**
+ * Sticky hero column. Renders the portrait, big name, mission text and
+ * social icons. Used as the LEFT column of the combined hero+about section
+ * (see app/page.tsx) so it stays pinned while the about copy scrolls on
+ * the right.
+ */
 export function Hero() {
   return (
-    <section
+    <div
       id="start"
-      className="relative h-screen min-h-[760px] overflow-hidden"
+      className="relative h-screen min-h-[760px] overflow-hidden lg:col-span-7 lg:sticky lg:top-0"
     >
       <div className="bg-radial-glow pointer-events-none absolute inset-0" />
 
-      {/* Massive bg name spans full section */}
-      <h1 className="bg-name absolute bottom-0 left-0 right-0 text-center text-[15vw] md:text-[18vw] lg:text-[230px] leading-[0.9] z-0 select-none animate-hero-name">
+      <h1 className="bg-name absolute bottom-0 left-0 right-0 text-center text-[15vw] md:text-[18vw] lg:text-[14vw] xl:text-[16vw] leading-[0.9] z-0 select-none animate-hero-name">
         Nedim Hasani
       </h1>
 
-      {/* Portrait stack — starts BELOW the nav so the head clears it */}
       <div
         className="absolute inset-x-0 bottom-0 flex items-end justify-center pointer-events-none"
         style={{ top: NAV_HEIGHT }}
@@ -45,12 +48,10 @@ export function Hero() {
         />
       </div>
 
-      {/* Soft bottom fade */}
       <div className="absolute -bottom-12 left-0 right-0 h-40 bg-gradient-to-t from-[#010101] via-[#010101]/85 to-transparent z-20 pointer-events-none" />
 
-      {/* Foreground copy */}
-      <div className="relative z-30 mx-auto flex h-full w-full max-w-[1440px] flex-col px-6 md:px-10 pt-32 md:pt-36">
-        <p className="max-w-xs md:max-w-[420px] text-[20px] md:text-[26px] lg:text-[30px] leading-[1.13] tracking-[-0.03em] text-[#878787] animate-hero-copy">
+      <div className="relative z-30 flex h-full w-full flex-col px-6 md:px-10 pt-32 md:pt-36">
+        <p className="max-w-xs md:max-w-[420px] text-[20px] md:text-[26px] lg:text-[28px] xl:text-[30px] leading-[1.13] tracking-[-0.03em] text-[#878787] animate-hero-copy">
           Gründer von Nesani. Ich baue Software-, Web- und App-Produkte — für
           ambitionierte Marken und die Menschen dahinter.
         </p>
@@ -70,6 +71,6 @@ export function Hero() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
