@@ -3,12 +3,51 @@
 import { useState, type FormEvent } from "react";
 import { Reveal } from "@/components/Reveal";
 
-export function ContactSection() {
-  const [submitted, setSubmitted] = useState(false);
+type Status = "idle" | "sending" | "sent" | "error";
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+export function ContactSection() {
+  const [status, setStatus] = useState<Status>("idle");
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    if (status === "sending") return;
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    setStatus("sending");
+    setError(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: data.get("name"),
+          email: data.get("email"),
+          message: data.get("message"),
+          website: data.get("website"), // honeypot
+        }),
+      });
+
+      const json = (await res.json().catch(() => ({}))) as {
+        ok?: boolean;
+        error?: string;
+      };
+
+      if (!res.ok || !json.ok) {
+        setStatus("error");
+        setError(json.error ?? "Versand fehlgeschlagen. Bitte später erneut probieren.");
+        return;
+      }
+
+      setStatus("sent");
+      form.reset();
+    } catch {
+      setStatus("error");
+      setError("Versand fehlgeschlagen. Bitte später erneut probieren.");
+    }
   };
 
   return (
@@ -43,59 +82,81 @@ export function ContactSection() {
         </div>
 
         <Reveal delay={120} className="w-full max-w-[600px]">
-        <form onSubmit={handleSubmit} className="w-full">
-          {submitted ? (
-            <div className="rounded-2xl bg-white/[0.04] ring-1 ring-white/10 p-8">
-              <p className="text-white text-lg">
-                Danke für deine Nachricht — ich melde mich zeitnah bei dir.
-              </p>
-            </div>
-          ) : (
-            <>
-              <input
-                type="text"
-                name="name"
-                placeholder="Name*"
-                required
-                className="ag-input mb-[18px]"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="E-Mail*"
-                required
-                className="ag-input mb-[18px]"
-              />
-              <textarea
-                name="message"
-                placeholder="Worum geht's? Kurz beschreiben.*"
-                required
-                rows={5}
-                className="ag-input mb-6 resize-none"
-              />
-
-              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-                <label className="flex items-start gap-3 max-w-[440px] cursor-pointer">
-                  <input
-                    type="checkbox"
-                    name="consent"
-                    required
-                    className="mt-1 h-4 w-4 shrink-0 rounded-full border border-white/40 bg-transparent appearance-none checked:bg-white checked:border-white cursor-pointer"
-                  />
-                  <span className="text-[11px] leading-snug tracking-[-0.02em] text-[#878787]">
-                    Ich habe die Datenschutzerklärung gelesen und bin
-                    einverstanden, dass meine Angaben elektronisch gespeichert
-                    werden, um meine Anfrage zu bearbeiten.
-                  </span>
-                </label>
-
-                <button type="submit" className="pill-button shrink-0">
-                  Senden
-                </button>
+          <form onSubmit={handleSubmit} className="w-full">
+            {status === "sent" ? (
+              <div className="rounded-2xl bg-white/[0.04] ring-1 ring-white/10 p-8">
+                <p className="text-white text-lg">
+                  Danke für deine Nachricht — ich melde mich zeitnah bei dir.
+                </p>
               </div>
-            </>
-          )}
-        </form>
+            ) : (
+              <>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name*"
+                  required
+                  maxLength={200}
+                  autoComplete="name"
+                  className="ag-input mb-[18px]"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="E-Mail*"
+                  required
+                  maxLength={254}
+                  autoComplete="email"
+                  className="ag-input mb-[18px]"
+                />
+                <textarea
+                  name="message"
+                  placeholder="Worum geht's? Kurz beschreiben.*"
+                  required
+                  rows={5}
+                  maxLength={5000}
+                  className="ag-input mb-6 resize-none"
+                />
+                {/* Honeypot — hidden from real users */}
+                <input
+                  type="text"
+                  name="website"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  className="hidden"
+                  aria-hidden="true"
+                />
+
+                {error && (
+                  <p className="mb-4 text-[13px] text-red-300/90">{error}</p>
+                )}
+
+                <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                  <label className="flex items-start gap-3 max-w-[440px] cursor-pointer">
+                    <input
+                      type="checkbox"
+                      name="consent"
+                      required
+                      className="mt-1 h-4 w-4 shrink-0 rounded-full border border-white/40 bg-transparent appearance-none checked:bg-white checked:border-white cursor-pointer"
+                    />
+                    <span className="text-[11px] leading-snug tracking-[-0.02em] text-[#878787]">
+                      Ich habe die Datenschutzerklärung gelesen und bin
+                      einverstanden, dass meine Angaben elektronisch
+                      gespeichert werden, um meine Anfrage zu bearbeiten.
+                    </span>
+                  </label>
+
+                  <button
+                    type="submit"
+                    disabled={status === "sending"}
+                    className="pill-button shrink-0 disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    {status === "sending" ? "Senden …" : "Senden"}
+                  </button>
+                </div>
+              </>
+            )}
+          </form>
         </Reveal>
       </div>
     </section>
