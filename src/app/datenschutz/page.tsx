@@ -44,7 +44,7 @@ export default function DatenschutzPage() {
                 Verantwortlich für die Datenverarbeitung auf dieser Website ist:
               </p>
               <p className="mt-3 text-white">
-                Nesani UG (haftungsbeschränkt) i.G.
+                Nesani UG (haftungsbeschränkt)
                 <br />
                 Nedim Hasani
                 <br />

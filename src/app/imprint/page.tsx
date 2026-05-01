@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Impressum",
   description:
-    "Impressum und rechtliche Angaben gemäß § 5 TMG für Nedim Hasani / Nesani UG (haftungsbeschränkt) i.G., Schwäbisch Gmünd.",
+    "Impressum und rechtliche Angaben gemäß § 5 TMG für Nedim Hasani / Nesani UG (haftungsbeschränkt), Schwäbisch Gmünd.",
   alternates: { canonical: "https://www.nedimhasani.de/imprint" },
 };
 
@@ -41,7 +41,7 @@ export default function ImprintPage() {
                 Angaben gemäß § 5 TMG
               </h2>
               <p className="text-white">
-                Nesani UG (haftungsbeschränkt) i.G.
+                Nesani UG (haftungsbeschränkt)
                 <br />
                 Nedim Hasani
                 <br />
@@ -57,7 +57,18 @@ export default function ImprintPage() {
               <h2 className="text-[20px] font-medium tracking-[-0.025em] text-white mb-4">
                 Vertreten durch
               </h2>
-              <p>Nedim Hasani</p>
+              <p>Nedim Hasani (Geschäftsführer)</p>
+            </section>
+
+            <section>
+              <h2 className="text-[20px] font-medium tracking-[-0.025em] text-white mb-4">
+                Handelsregister
+              </h2>
+              <p>
+                Registergericht: Amtsgericht Ulm
+                <br />
+                Registernummer: HRB 751868
+              </p>
             </section>
 
             <section>

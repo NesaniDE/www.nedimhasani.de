@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   keywords: KEYWORDS,
   authors: [{ name: "Nedim Hasani", url: SITE_URL }],
   creator: "Nedim Hasani",
-  publisher: "Nesani UG (haftungsbeschränkt) i.G.",
+  publisher: "Nesani UG (haftungsbeschränkt)",
   applicationName: "Nedim Hasani",
   category: "personal",
   alternates: {
@@ -112,7 +112,7 @@ const personJsonLd = {
   jobTitle: "Founder · Software Engineer",
   worksFor: {
     "@type": "Organization",
-    name: "Nesani UG (haftungsbeschränkt) i.G.",
+    name: "Nesani UG (haftungsbeschränkt)",
     url: "https://www.nesani.de",
   },
   alumniOf: {

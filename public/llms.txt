@@ -1,6 +1,6 @@
 # Nedim Hasani
 
-> Persönliche Website von Nedim Hasani — Gründer von Nesani UG (haftungsbeschränkt) i.G. aus Schwäbisch Gmünd. Software-Entwickler mit Schwerpunkt auf Web-, Mobile- und Produkt-Engineering, KI-Integration und autonomen Systemen für Unternehmen im DACH-Raum.
+> Persönliche Website von Nedim Hasani — Gründer von Nesani UG (haftungsbeschränkt) aus Schwäbisch Gmünd. Software-Entwickler mit Schwerpunkt auf Web-, Mobile- und Produkt-Engineering, KI-Integration und autonomen Systemen für Unternehmen im DACH-Raum.
 
 ## Über Nedim
 - Gründer von Nesani — Studio für digitale Strukturen, KI-Integration und autonome Systeme
