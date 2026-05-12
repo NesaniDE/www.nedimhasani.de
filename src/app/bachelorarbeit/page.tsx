@@ -156,7 +156,51 @@ export default function BachelorarbeitPage() {
 
           <section className="mb-16 md:mb-24">
             <SectionHeading
-              kicker="02 · Kontext"
+              kicker="02 · Manuskript"
+              title="Aktuelle Vorschau"
+              meta={`Stand · ${formattedLastUpdate}`}
+            />
+            <p className="mb-6 max-w-[760px] text-[15px] sm:text-[16px] leading-[1.65] tracking-[-0.02em] text-[#878787]">
+              Aktueller Auszug aus dem LaTeX-Manuskript (Deckblatt, Kurzfassung,
+              geplante Gliederung). Die Datei wird manuell aktualisiert, sobald
+              neue Kapitel reinkommen.
+            </p>
+
+            <div className="mb-4 flex flex-wrap items-center gap-3">
+              <a
+                href="/bachelorarbeit/thesis.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-white text-[#010101] px-5 py-2.5 text-[14px] font-medium tracking-[-0.02em] hover:bg-white/90 transition-colors"
+              >
+                In neuem Tab öffnen
+              </a>
+              <a
+                href="/bachelorarbeit/thesis.pdf"
+                download="Bachelorarbeit_Hasani_SemanticVR.pdf"
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] text-white px-5 py-2.5 text-[14px] tracking-[-0.02em] hover:bg-white/[0.06] transition-colors"
+              >
+                PDF herunterladen
+              </a>
+            </div>
+
+            <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02]">
+              <iframe
+                src="/bachelorarbeit/thesis.pdf#view=FitH&toolbar=1"
+                title="Bachelorarbeit – aktueller Manuskript-Stand"
+                className="block w-full bg-[#1a1a1a]"
+                style={{ height: "min(90vh, 1100px)" }}
+              />
+            </div>
+            <p className="mt-3 text-[12px] tracking-[-0.015em] text-[#666]">
+              Hinweis: Manche Browser zeigen PDFs nicht inline an — in dem Fall
+              bitte auf „In neuem Tab öffnen“ klicken.
+            </p>
+          </section>
+
+          <section className="mb-16 md:mb-24">
+            <SectionHeading
+              kicker="03 · Kontext"
               title="Zielsetzung"
             />
             <div className="space-y-5 md:space-y-6 text-[16px] sm:text-[17px] md:text-[18px] leading-[1.65] tracking-[-0.02em] text-[#878787] max-w-[760px]">
@@ -182,7 +226,7 @@ export default function BachelorarbeitPage() {
 
           <section className="mb-16 md:mb-24">
             <SectionHeading
-              kicker="03 · Arbeitspakete"
+              kicker="04 · Arbeitspakete"
               title="Work Packages"
             />
             <ul className="space-y-3 md:space-y-4">
@@ -237,7 +281,7 @@ export default function BachelorarbeitPage() {
 
           <section className="mb-16 md:mb-24">
             <SectionHeading
-              kicker="04 · Literatur"
+              kicker="05 · Literatur"
               title="Quellenpaket"
               meta={`${sourceStatusSummary.available} / ${sourceStatusSummary.total} verfügbar`}
             />
@@ -322,7 +366,7 @@ export default function BachelorarbeitPage() {
 
           <section className="mb-16 md:mb-20">
             <SectionHeading
-              kicker="05 · Kontakt"
+              kicker="06 · Kontakt"
               title="Bei Rückfragen"
             />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">

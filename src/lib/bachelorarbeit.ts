@@ -57,22 +57,22 @@ export const workPackages: WorkPackage[] = [
     title: "Concept Development",
     description:
       "Entwurf eines Konzepts zur dynamischen Annotation von Unity-Szenengraphen. Klärung, welche Daten automatisch erfasst werden (Properties, Object Classes …) und wo Nutzer-Annotationen nötig sind.",
-    progress: 25,
+    progress: 85,
     weight: 1.2,
     status: "active",
     note:
-      "Architektur-Skizze entsteht: Unity-Komponenten ↔ Server-State ↔ LLM. Datenmodell für Scene Graph Updates wird gerade definiert.",
+      "Architektur steht: Unity-Komponenten ↔ Server-State ↔ LLM. Datenmodell und Update-Semantik für dynamische Szenen sind festgezogen; Feinjustierung erfolgt parallel zur Implementierung.",
   },
   {
     id: 3,
     title: "Prototype Implementation",
     description:
       "Implementierung als MIRIA-Integration: Unity-Komponenten für dynamische Annotation, serverseitige Verwaltung des Semantic Scene Graph und Anbindung an einen LLM zur Reasoning-Unterstützung.",
-    progress: 5,
+    progress: 85,
     weight: 1.6,
-    status: "todo",
+    status: "active",
     note:
-      "Vorbereitung: MIRIA-Projekt lokal aufgesetzt, Unity-Setup steht. Erste Code-Spikes nach Abschluss des Konzeptdokuments geplant.",
+      "Lokaler Prototyp läuft. Ausstehend: Anpassung an das Ziel-Headset und Tests im VISUS-Labor — danach Übergabe an WP4 (Evaluation).",
   },
   {
     id: 4,
