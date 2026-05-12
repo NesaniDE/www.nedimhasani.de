@@ -288,7 +288,12 @@ export default function BachelorarbeitPage() {
             <p className="mb-10 max-w-[760px] text-[15px] sm:text-[16px] leading-[1.65] tracking-[-0.02em] text-[#878787]">
               {sourceStatusSummary.total} Quellen, gegliedert in sechs Blöcke
               entlang der inhaltlichen Achsen der Arbeit. „Vorhanden“ bedeutet
-              PDF/JSON gesichert; „Zu besorgen“ steht noch aus.
+              PDF/JSON gesichert; „Zu besorgen“ steht noch aus. Die Cite-Keys
+              entsprechen 1:1 den Einträgen in{" "}
+              <code className="text-[13px] text-white/80 bg-white/[0.06] rounded px-1.5 py-0.5">
+                thesis/bibliography.bib
+              </code>
+              .
             </p>
 
             <div className="space-y-10 md:space-y-12">
@@ -322,6 +327,9 @@ export default function BachelorarbeitPage() {
                           </p>
                           <p className="mt-1 text-[12px] sm:text-[13px] leading-[1.5] tracking-[-0.015em] text-[#878787]">
                             {source.authors} · {source.venue} ({source.year})
+                          </p>
+                          <p className="mt-1.5 font-mono text-[11.5px] sm:text-[12px] tracking-[-0.01em] text-emerald-300/80">
+                            \cite{`{${source.citeKey}}`}
                           </p>
                           {(source.doi || source.url) && (
                             <a

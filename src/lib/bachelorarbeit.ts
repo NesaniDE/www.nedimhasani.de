@@ -12,6 +12,7 @@ export type WorkPackage = {
 
 export type Source = {
   ref: number;
+  citeKey: string;
   authors: string;
   year: number;
   title: string;
@@ -110,6 +111,7 @@ const haveSet = new Set<number>([
 const rawSources: Omit<Source, "available">[] = [
   {
     ref: 1,
+    citeKey: "Buschel2021Miria",
     authors: "Büschel, W., Lehmann, A., & Dachselt, R.",
     year: 2021,
     title:
@@ -119,6 +121,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 2,
+    citeKey: "Dogan2024XRObjects",
     authors:
       "Dogan, M. D., Gonzalez, E. J., Ahuja, K., Du, R., Colaço, A., Lee, J., Gonzalez-Franco, M., & Kim, D.",
     year: 2024,
@@ -128,6 +131,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 3,
+    citeKey: "Gu2024ConceptGraphs",
     authors:
       "Gu, Q., Kuwajerwala, A., Morin, S., Jatavallabhula, K. M., et al.",
     year: 2024,
@@ -138,6 +142,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 4,
+    citeKey: "Luo2023Pearl",
     authors:
       "Luo, W., Yu, Z., Rzayev, R., Satkowski, M., Gumhold, S., McGinity, M., & Dachselt, R.",
     year: 2023,
@@ -148,6 +153,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 5,
+    citeKey: "Tian2025ChartGPT",
     authors:
       "Tian, Y., Cui, W., Deng, D., Yi, X., Yang, Y., Zhang, H., & Wu, Y.",
     year: 2025,
@@ -158,6 +164,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 6,
+    citeKey: "Wald2020Learning3DSSG",
     authors: "Wald, J., Dhamo, H., Navab, N., & Tombari, F.",
     year: 2020,
     title: "Learning 3D Semantic Scene Graphs From 3D Indoor Reconstructions",
@@ -166,6 +173,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 7,
+    citeKey: "Qian2022ScalAR",
     authors: "Qian, X., He, F., Hu, X., Wang, T., Ipsita, A., & Ramani, K.",
     year: 2022,
     title:
@@ -175,6 +183,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 8,
+    citeKey: "Wu2021IncrementalSSG",
     authors: "Wu, S.-C., Tateno, K., Navab, N., & Tombari, F.",
     year: 2021,
     title: "Incremental 3D Semantic Scene Graph Prediction from RGB Sequences",
@@ -182,6 +191,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 9,
+    citeKey: "Han2020LiveSemantic3D",
     authors: "Han, L., Zheng, T., Zhu, Y., Xu, L., & Fang, L.",
     year: 2020,
     title: "Live Semantic 3D Perception for Immersive Augmented Reality",
@@ -190,6 +200,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 10,
+    citeKey: "Tahara2020RetargetableAR",
     authors: "Tahara, T., Seno, T., Narita, G., & Ishikawa, T.",
     year: 2020,
     title:
@@ -198,6 +209,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 11,
+    citeKey: "Hasler2025SpatialReasoner",
     authors: "Häsler, S., & Ackermann, P.",
     year: 2025,
     title: "Spatial Reasoner: A 3D Inference Pipeline for XR Applications",
@@ -206,6 +218,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 12,
+    citeKey: "Bartoli2025Social3DSG",
     authors:
       "Bartoli, E., Rotondi, D., He, B., Jensfelt, P., Arras, K. O., & Leite, I.",
     year: 2025,
@@ -216,6 +229,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 13,
+    citeKey: "Armeni20193DSG",
     authors:
       "Armeni, I., He, Z.-Y., Gwak, J., Zamir, A. R., Fischer, M., Malik, J., & Savarese, S.",
     year: 2019,
@@ -226,6 +240,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 14,
+    citeKey: "Rosinol2020Dynamic3DSG",
     authors: "Rosinol, A., Gupta, A., Abate, M., Shi, J., & Carlone, L.",
     year: 2020,
     title:
@@ -235,6 +250,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 15,
+    citeKey: "Hughes2022Hydra",
     authors: "Hughes, N., Chang, Y., & Carlone, L.",
     year: 2022,
     title:
@@ -244,6 +260,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 16,
+    citeKey: "Zhu2023SGGSurvey",
     authors:
       "Zhu, G., Zhang, L., Jiang, Y., Dang, Y., Hou, H., Shen, P., Zhao, X., Shah, S. A. A., & Bennamoun, M.",
     year: 2023,
@@ -253,6 +270,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 17,
+    citeKey: "Jatavallabhula2023ConceptFusion",
     authors:
       "Jatavallabhula, K. M., Kuwajerwala, A., Gu, Q., Omama, M., Chen, T., Li, S., et al.",
     year: 2023,
@@ -262,6 +280,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 18,
+    citeKey: "Ens2021GrandChallenges",
     authors:
       "Ens, B., Bach, B., Cordeil, M., Engelke, U., Serrano, M., Willett, W., et al.",
     year: 2021,
@@ -271,6 +290,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 19,
+    citeKey: "Kraus2022IAAbstractSurvey",
     authors:
       "Kraus, M., Fuchs, J., Sommer, B., Klein, K., Engelke, U., Keim, D., & Schreiber, F.",
     year: 2022,
@@ -280,6 +300,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 20,
+    citeKey: "Fonnet2021SurveyIA",
     authors: "Fonnet, A., & Prié, Y.",
     year: 2021,
     title: "Survey of Immersive Analytics",
@@ -288,6 +309,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 21,
+    citeKey: "Bressa2022Situated",
     authors:
       "Bressa, N., Kauer, H., Willett, W., Huron, S., & Vermeulen, J.",
     year: 2022,
@@ -298,6 +320,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 22,
+    citeKey: "DeLaTorre2024LLMR",
     authors:
       "De La Torre, F., Fang, C. M., Huang, H., Banburski-Fahey, A., Amores Fernandez, J., & Lanier, J.",
     year: 2024,
@@ -308,6 +331,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 23,
+    citeKey: "Kim2025ExplainableXR",
     authors:
       "Kim, Y., Amir, Z., Singh, M. K., Boorboor, S., Mueller, K., & Kaufman, A. E.",
     year: 2025,
@@ -318,6 +342,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 24,
+    citeKey: "Alves2025LLMinXR",
     authors: "Alves, M., et al.",
     year: 2025,
     title:
@@ -327,6 +352,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 25,
+    citeKey: "Huang2024LLMSceneGraph",
     authors: "Huang, Z., et al.",
     year: 2024,
     title: "LLM-enhanced Scene Graph Learning for Household Rearrangement",
@@ -335,6 +361,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 26,
+    citeKey: "Madhavaram2025VIZOR",
     authors: "Madhavaram, V., Sengar, V., De, A., & Sharma, C.",
     year: 2025,
     title:
@@ -344,6 +371,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 27,
+    citeKey: "Gunther2026OpenSetMapping",
     authors:
       "Günther, M., Igelbrink, F., Lima, O., Niecksch, L., Renz, M., & Atzmueller, M.",
     year: 2026,
@@ -353,6 +381,7 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 28,
+    citeKey: "Hubenschmid2022ReLive",
     authors:
       "Hubenschmid, S., Wieland, J., Fink, D. I., Batch, A., Zagermann, J., Elmqvist, N., & Reiterer, H.",
     year: 2022,
