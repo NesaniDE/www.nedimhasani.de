@@ -286,10 +286,10 @@ export default function BachelorarbeitPage() {
               meta={`${sourceStatusSummary.available} / ${sourceStatusSummary.total} verfügbar`}
             />
             <p className="mb-10 max-w-[760px] text-[15px] sm:text-[16px] leading-[1.65] tracking-[-0.02em] text-[#878787]">
-              {sourceStatusSummary.total} Quellen, gegliedert in sechs Blöcke
-              entlang der inhaltlichen Achsen der Arbeit. „Vorhanden“ bedeutet
-              PDF/JSON gesichert; „Zu besorgen“ steht noch aus. Die Cite-Keys
-              entsprechen 1:1 den Einträgen in{" "}
+              {sourceStatusSummary.total} Quellen, gruppiert nach Thema entlang
+              der Kapitelstruktur (Grundlagen, Verwandte Arbeiten). „Vorhanden“
+              bedeutet PDF/JSON gesichert; „Zu besorgen“ steht noch aus. Die
+              Cite-Keys entsprechen 1:1 den Einträgen in{" "}
               <code className="text-[13px] text-white/80 bg-white/[0.06] rounded px-1.5 py-0.5">
                 thesis/bibliography.bib
               </code>

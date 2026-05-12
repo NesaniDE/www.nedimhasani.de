@@ -407,33 +407,23 @@ const pick = (refs: number[]): Source[] =>
 export const sourceBlocks: SourceBlock[] = [
   {
     id: "A",
-    title: "BA-Proposal (Pflicht)",
-    sources: pick([1, 2, 3, 4, 5, 6]),
+    title: "Immersive Analytics & Situated Analysis",
+    sources: pick([1, 4, 18, 19, 20, 21, 28]),
   },
   {
     id: "B",
-    title: "Vom Professor (Pflicht)",
-    sources: pick([7, 8, 9, 10, 11, 12]),
+    title: "3D Scene Graphs — Foundations & Methoden",
+    sources: pick([3, 6, 8, 13, 14, 15, 16, 17, 26, 27]),
   },
   {
     id: "C",
-    title: "3D Scene Graph Foundations",
-    sources: pick([13, 14, 15, 16, 17]),
+    title: "Semantische Annotation in AR / VR / XR",
+    sources: pick([2, 7, 9, 10, 11, 12]),
   },
   {
     id: "D",
-    title: "Immersive Analytics",
-    sources: pick([18, 19, 20, 21]),
-  },
-  {
-    id: "E",
-    title: "LLM + XR Integration",
-    sources: pick([22, 23, 24, 25]),
-  },
-  {
-    id: "F",
-    title: "Open-Set Semantik & XR-Interaktion",
-    sources: pick([26, 27, 28]),
+    title: "LLM-gestützte Szenenanalyse & Visualisierung",
+    sources: pick([5, 22, 23, 24, 25]),
   },
 ];
 
