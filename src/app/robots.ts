@@ -30,17 +30,22 @@ const AI_BOTS = [
   "mistralai-User", // Mistral
 ];
 
+// Private routes that must never appear in search engines or LLM training
+// corpora. Strict disallow for every user agent.
+const PRIVATE_PATHS = ["/bachelorarbeit", "/bachelorarbeit/"];
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       ...AI_BOTS.map((userAgent) => ({
         userAgent,
         allow: "/",
+        disallow: PRIVATE_PATHS,
       })),
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/"],
+        disallow: ["/api/", ...PRIVATE_PATHS],
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,
