@@ -115,9 +115,13 @@ export const workPackages: WorkPackage[] = [
   },
 ];
 
+// Bressa (ref 21) muss neu beschafft werden – der ursprünglich heruntergeladene
+// PDF unter DOI 10.1145/3491102.3517537 ist tatsächlich Subramonyam et al.
+// (ref 29). Der echte Bressa-Aufsatz liegt im IEEE TVCG 28(1), DOI
+// 10.1109/TVCG.2021.3114835, und ist noch zu besorgen.
 const haveSet = new Set<number>([
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
-  23, 24, 25, 26, 27, 28,
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23,
+  24, 25, 26, 27, 28, 29,
 ]);
 
 const rawSources: Omit<Source, "available">[] = [
@@ -195,11 +199,11 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 8,
-    citeKey: "Wu2021IncrementalSSG",
+    citeKey: "Wu2023IncrementalSSG",
     authors: "Wu, S.-C., Tateno, K., Navab, N., & Tombari, F.",
-    year: 2021,
+    year: 2023,
     title: "Incremental 3D Semantic Scene Graph Prediction from RGB Sequences",
-    venue: "IEEE/CVF CVPR 2021",
+    venue: "IEEE/CVF CVPR 2023",
   },
   {
     ref: 9,
@@ -217,7 +221,8 @@ const rawSources: Omit<Source, "available">[] = [
     year: 2020,
     title:
       "Retargetable AR: Context-aware Augmented Reality in Indoor Scenes based on 3D Scene Graph",
-    venue: "Sony R&D Center",
+    venue: "IEEE ISMAR-Adjunct 2020",
+    doi: "10.1109/ISMAR-Adjunct51615.2020.00072",
   },
   {
     ref: 11,
@@ -323,12 +328,12 @@ const rawSources: Omit<Source, "available">[] = [
     ref: 21,
     citeKey: "Bressa2022Situated",
     authors:
-      "Bressa, N., Kauer, H., Willett, W., Huron, S., & Vermeulen, J.",
+      "Bressa, N., Korsgaard, H. H., Tabard, A., Houben, S., & Vermeulen, J.",
     year: 2022,
     title:
       "What's the Situation with Situated Visualization? A Survey and Perspectives on Situatedness",
-    venue: "Proc. CHI '22",
-    doi: "10.1145/3491102.3517537",
+    venue: "IEEE TVCG 28(1)",
+    doi: "10.1109/TVCG.2021.3114835",
   },
   {
     ref: 22,
@@ -354,8 +359,8 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 24,
-    citeKey: "Alves2025LLMinXR",
-    authors: "Alves, M., et al.",
+    citeKey: "Tang2025LLMinXR",
+    authors: "Tang, et al.",
     year: 2025,
     title:
       "LLM Integration in Extended Reality: A Comprehensive Review of Current Trends, Challenges, and Future Perspectives",
@@ -364,8 +369,9 @@ const rawSources: Omit<Source, "available">[] = [
   },
   {
     ref: 25,
-    citeKey: "Huang2024LLMSceneGraph",
-    authors: "Huang, Z., et al.",
+    citeKey: "Li2024LLMSceneGraph",
+    authors:
+      "Li, W., Yu, Z., She, Q., Yu, Z., Lan, Y., Zhu, C., Hu, R., & Xu, K.",
     year: 2024,
     title: "LLM-enhanced Scene Graph Learning for Household Rearrangement",
     venue: "SIGGRAPH Asia 2024",
@@ -402,6 +408,16 @@ const rawSources: Omit<Source, "available">[] = [
     venue: "Proc. CHI '22",
     doi: "10.1145/3491102.3517550",
   },
+  {
+    ref: 29,
+    citeKey: "Subramonyam2022LeakyAbstractions",
+    authors: "Subramonyam, H., Im, J., Seifert, C., & Adar, E.",
+    year: 2022,
+    title:
+      "Solving Separation-of-Concerns Problems in Collaborative Design of Human-AI Systems through Leaky Abstractions",
+    venue: "Proc. CHI '22",
+    doi: "10.1145/3491102.3517537",
+  },
 ];
 
 const allSources: Source[] = rawSources.map((s) => ({
@@ -435,7 +451,7 @@ export const sourceBlocks: SourceBlock[] = [
   {
     id: "D",
     title: "LLM-gestützte Szenenanalyse & Visualisierung",
-    sources: pick([5, 22, 23, 24, 25]),
+    sources: pick([5, 22, 23, 24, 25, 29]),
   },
 ];
 
