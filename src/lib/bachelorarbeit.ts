@@ -47,11 +47,11 @@ export const workPackages: WorkPackage[] = [
     title: "Literature Review",
     description:
       "Systematische Sichtung der Arbeiten zu XR-Visualisierungen und Semantic Scene Graphs im Kontext immersiver Datenanalyse.",
-    progress: 55,
+    progress: 85,
     weight: 1,
     status: "active",
     note:
-      "Quellenpaket strukturiert (Blöcke A–F). 12 von 28 Quellen lokal als PDF/JSON archiviert; weitere Beschaffung läuft parallel zur Konzeptphase.",
+      "Beschaffung abgeschlossen: alle 28 Quellen liegen als PDF + Markdown-Volltext lokal vor (gruppiert in vier Themenblöcke). Verbleibend: Synthese der Schlüsselargumente pro Block für Kapitel 2 und 3.",
   },
   {
     id: 2,
@@ -105,7 +105,8 @@ export const workPackages: WorkPackage[] = [
 ];
 
 const haveSet = new Set<number>([
-  1, 3, 7, 8, 9, 10, 11, 12, 14, 15, 26, 27,
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
+  23, 24, 25, 26, 27, 28,
 ]);
 
 const rawSources: Omit<Source, "available">[] = [
