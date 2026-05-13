@@ -47,22 +47,22 @@ export const workPackages: WorkPackage[] = [
     title: "Literature Review",
     description:
       "Systematische Sichtung der Arbeiten zu XR-Visualisierungen und Semantic Scene Graphs im Kontext immersiver Datenanalyse.",
-    progress: 85,
+    progress: 100,
     weight: 1,
-    status: "active",
+    status: "done",
     note:
-      "Beschaffung abgeschlossen: alle 28 Quellen liegen als PDF + Markdown-Volltext lokal vor (gruppiert in vier Themenblöcke). Verbleibend: Synthese der Schlüsselargumente pro Block für Kapitel 2 und 3.",
+      "Alle 28 Quellen gesichtet, gruppiert in vier Themenblöcke (Immersive Analytics, 3D Scene Graphs, Semantische Annotation in AR/VR/XR, LLM-gestützte Szenenanalyse). PDFs + Markdown-Volltexte lokal archiviert.",
   },
   {
     id: 2,
     title: "Concept Development",
     description:
       "Entwurf eines Konzepts zur dynamischen Annotation von Unity-Szenengraphen. Klärung, welche Daten automatisch erfasst werden (Properties, Object Classes …) und wo Nutzer-Annotationen nötig sind.",
-    progress: 85,
+    progress: 100,
     weight: 1.2,
-    status: "active",
+    status: "done",
     note:
-      "Architektur steht: Unity-Komponenten ↔ Server-State ↔ LLM. Datenmodell und Update-Semantik für dynamische Szenen sind festgezogen; Feinjustierung erfolgt parallel zur Implementierung.",
+      "Drei-Schichten-Architektur (Unity-Client ↔ FastAPI-Backend ↔ LLM) finalisiert, Datenmodell für Scene Graph und Update-Semantik für dynamische Szenen festgezogen. Konzept ist die Grundlage der Implementierung.",
   },
   {
     id: 3,
@@ -89,9 +89,11 @@ export const workPackages: WorkPackage[] = [
     title: "Thesis Writing",
     description:
       "Ausarbeitung der Bachelorarbeit und Präsentation im VIS-Kolloquium.",
-    progress: 0,
+    progress: 15,
     weight: 1.2,
-    status: "todo",
+    status: "active",
+    note:
+      "Deckblatt, Kurzfassung und Gliederung (7 Kapitel) im LaTeX-Manuskript angelegt; Bibliographie (28 Quellen) mit Cite-Keys eingepflegt. Inhaltlich begonnen wird mit den Grundlagen (Kapitel 2).",
   },
   {
     id: 6,
