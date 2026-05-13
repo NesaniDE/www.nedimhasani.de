@@ -88,7 +88,7 @@ export const workPackages: WorkPackage[] = [
     id: 5,
     title: "Thesis Writing",
     description:
-      "Ausarbeitung der Bachelorarbeit und Präsentation im VIS-Kolloquium.",
+      "Schriftliche Ausarbeitung der Bachelorarbeit entlang der sieben Kapitel im LaTeX-Manuskript.",
     progress: 15,
     weight: 1.2,
     status: "active",
@@ -97,6 +97,15 @@ export const workPackages: WorkPackage[] = [
   },
   {
     id: 6,
+    title: "Kolloquium",
+    description:
+      "Vorbereitung und Präsentation der Arbeit im VIS-Kolloquium an der Universität Stuttgart.",
+    progress: 0,
+    weight: 0.4,
+    status: "todo",
+  },
+  {
+    id: 7,
     title: "Demo Video",
     description:
       "Zwei-minütiges Demo-Video zur Vorstellung der Ergebnisse der Thesis.",
