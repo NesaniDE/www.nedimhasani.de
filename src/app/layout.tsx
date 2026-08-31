@@ -11,9 +11,9 @@ const onest = Onest({
 });
 
 const SITE_URL = "https://www.nedimhasani.de";
-const TITLE = "Nedim Hasani — Gründer von Nesani · Software, Web & App";
+const TITLE = "Nedim Hasani — Personal Branding & Digitalstrategie";
 const DESCRIPTION =
-  "Persönliche Seite von Nedim Hasani. Gründer von Nesani — ich baue Software-, Web- und App-Produkte für ambitionierte Marken im DACH-Raum. Aus Schwäbisch Gmünd.";
+  "Nedim Hasani, Gründer von Nesani. Personal Branding für Geschäftsführer und Gründer — mit Informatik-Hintergrund statt reiner Kreativagentur.";
 const KEYWORDS = [
   "Nedim Hasani",
   "Nesani",
@@ -108,8 +108,32 @@ const personJsonLd = {
   "@type": "Person",
   name: "Nedim Hasani",
   url: SITE_URL,
-  image: `${SITE_URL}/seo/og-image.png`,
-  jobTitle: "Founder · Software Engineer",
+  image: {
+    "@type": "ImageObject",
+    url: `${SITE_URL}/images/nedim.png`,
+    caption: "Nedim Hasani",
+  },
+  jobTitle: "Gründer & Personal-Branding-Berater",
+  description:
+    "Gründer der Nesani UG mit abgeschlossenem Informatik-Studium. Schwerpunkt: Personal Branding für Geschäftsführer und Gründer sowie Social-Media-Strategie für Unternehmensmarken.",
+  knowsAbout: [
+    "Personal Branding",
+    "Personenmarke",
+    "Social-Media-Strategie",
+    "Content-Strategie",
+    "Markenpositionierung",
+    "Softwareentwicklung",
+    "Webentwicklung",
+    "KI-Integration",
+  ],
+  hasOccupation: {
+    "@type": "Occupation",
+    name: "Personal-Branding-Berater",
+    occupationLocation: {
+      "@type": "City",
+      name: "Schwäbisch Gmünd",
+    },
+  },
   worksFor: {
     "@type": "Organization",
     name: "Nesani UG (haftungsbeschränkt)",
@@ -131,7 +155,7 @@ const personJsonLd = {
     "https://www.instagram.com/nedimhasani",
     "https://www.tiktok.com/@nedimhasani",
     "https://www.youtube.com/@nedimhasani",
-    "https://github.com/NesaniDE",
+    "https://www.nesani.de/ueber-uns",
   ],
 };
 

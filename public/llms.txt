@@ -1,6 +1,6 @@
 # Nedim Hasani
 
-> Persönliche Website von Nedim Hasani — Gründer von Nesani UG (haftungsbeschränkt) aus Schwäbisch Gmünd. Software-Entwickler mit Schwerpunkt auf Web-, Mobile- und Produkt-Engineering, KI-Integration und autonomen Systemen für Unternehmen im DACH-Raum.
+> Persönliche Website von Nedim Hasani — Gründer der Nesani UG (haftungsbeschränkt) aus Schwäbisch Gmünd. Schwerpunkt: Personal Branding für Geschäftsführer und Gründer sowie Social-Media-Strategie für Unternehmensmarken — mit Hintergrund in Informatik, Software- und Produkt-Engineering.
 
 ## Über Nedim
 - Gründer von Nesani — Studio für Social Media, Websites sowie KI und Automatisierung
@@ -10,8 +10,9 @@
 - E-Mail: info@nedimhasani.de
 
 ## Aktuelle Projekte (alle unter Nesani)
+- [Personal Branding bei Nesani](https://www.nesani.de/leistungen/personal-branding): Angebot für Personenmarken — Positionierung, Themenstrategie, Produktion, laufende Betreuung
 - [Nesani](https://www.nesani.de): Hauptprojekt — Studio für Social Media, Websites sowie KI und Automatisierung im DACH-Raum
-- Aktueller Schwerpunkt: Social Media für Unternehmen und Unternehmer — Personal Branding für Geschäftsführer und Gründer sowie Content für Unternehmensmarken, von der Strategie über die Produktion bis zur laufenden Betreuung
+- Aktueller Schwerpunkt: Personal Branding für Geschäftsführer und Gründer sowie Social Media für Unternehmen — Personal Branding für Geschäftsführer und Gründer sowie Content für Unternehmensmarken, von der Strategie über die Produktion bis zur laufenden Betreuung
 
 ## Seiten
 - [Startseite](https://www.nedimhasani.de): Hero mit Bio, aktuelle Projekte, Kontakt

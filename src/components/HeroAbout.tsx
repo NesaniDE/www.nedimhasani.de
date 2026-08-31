@@ -156,10 +156,10 @@ export function HeroAbout() {
             </Reveal>
 
             <Reveal delay={80}>
-              <h4 className="text-[18px] sm:text-[20px] md:text-[22px] leading-[1.32] tracking-[-0.025em] text-white mb-7 md:mb-8">
+              <h3 className="text-[18px] sm:text-[20px] md:text-[22px] leading-[1.32] tracking-[-0.025em] text-white mb-7 md:mb-8">
                 Gründer von Nesani und seit Jahren als Software-Entwickler in
                 Web, Mobile und Produkt-Engineering unterwegs.
-              </h4>
+              </h3>
             </Reveal>
 
             <div className="space-y-5 md:space-y-6 text-[15px] sm:text-[16px] md:text-[18px] leading-[1.6] md:leading-[1.55] tracking-[-0.025em] text-[#878787]">
@@ -190,10 +190,15 @@ export function HeroAbout() {
                 <p>
                   Heute liegt mein Fokus auf{" "}
                   <span className="text-white">Nesani</span> — dort verantworte
-                  ich vor allem Social Media für Unternehmen und Unternehmer:
-                  Personal Branding für Geschäftsführer und Gründer sowie
-                  Content für Unternehmensmarken, von der Strategie über die
-                  Produktion bis zur laufenden Betreuung.
+                  ich vor allem Social Media für Unternehmen und Unternehmer:{" "}
+                  <a
+                    href="https://www.nesani.de/leistungen/personal-branding"
+                    className="text-white underline decoration-white/30 underline-offset-4 transition hover:decoration-white"
+                  >
+                    Personal Branding für Geschäftsführer und Gründer
+                  </a>{" "}
+                  sowie Content für Unternehmensmarken, von der Strategie über
+                  die Produktion bis zur laufenden Betreuung.
                 </p>
               </Reveal>
               <Reveal delay={340}>
