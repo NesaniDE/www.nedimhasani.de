@@ -16,23 +16,23 @@ const subProjects: SubProject[] = [
     title: "GD-Listen",
     description:
       "Kuratierte Top-10-Listen für Schwäbisch Gmünd — der erste Guide, den Einheimische wirklich nutzen. Restaurants, Cafés, Wochenend-Spots, ehrlich gerankt und laufend aktualisiert.",
-    href: "https://gd-listen-two.vercel.app",
+    href: "https://www.gd-listen.de",
   },
   {
-    status: "In Arbeit",
-    category: "Marktplatz · KI",
-    title: "BEM-Marktplatz",
+    status: "Beta",
+    category: "Lokal · SaaS",
+    title: "AA-Listen",
     description:
-      "Ein Marktplatz, auf dem KI-Agenten echte Menschen für reale Aufgaben beauftragen. Mit eigenem MCP-Server, sodass Agenten Aufträge posten, tracken und auszahlen können.",
-    href: "https://bem-marktplatz-theta.vercel.app",
+      "Dasselbe Prinzip für Aalen: redaktionelle Top-10-Listen für Gastro, Gesundheit, Handwerk und Shopping — mit offengelegter Methodik statt behaupteter Bestenliste.",
+    href: "https://www.aa-listen.de",
   },
   {
-    status: "In Arbeit",
-    category: "Produkt · KI",
-    title: "Nesani Editor",
+    status: "Beta",
+    category: "Lokal · SaaS",
+    title: "S-Listen",
     description:
-      "KI-gestützte Websitepflege. Kunden ändern ihre Website per Chat, sehen eine Live-Vorschau und veröffentlichen erst nach Freigabe. Next.js 16 + Supabase im Hintergrund.",
-    href: "https://nesani-editor.vercel.app",
+      "Der Stuttgarter Ableger — deutlich größer, mit Listen von Restaurants über Werbeagenturen bis Social-Media-Agenturen und Profilen quer durch die Stadtteile.",
+    href: "https://www.s-listen.de",
   },
 ];
 

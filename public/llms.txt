@@ -11,9 +11,9 @@
 
 ## Aktuelle Projekte (alle unter Nesani)
 - [Nesani](https://www.nesani.de): Hauptprojekt — Studio für digitale Strukturen, KI und autonome Systeme im DACH-Raum
-- [GD-Listen](https://gd-listen-two.vercel.app): Kuratierte Top-10-Listen für Schwäbisch Gmünd (Beta)
-- [BEM-Marktplatz](https://bem-marktplatz-theta.vercel.app): Marktplatz, auf dem KI-Agenten echte Menschen für reale Aufgaben beauftragen, inkl. eigenem MCP-Server (in Entwicklung)
-- [Nesani Editor](https://nesani-editor.vercel.app): KI-gestützte Websitepflege per Chat — Next.js 16 + Supabase (in Entwicklung)
+- [GD-Listen](https://www.gd-listen.de): Kuratierte Top-10-Listen für Schwäbisch Gmünd (Beta)
+- [AA-Listen](https://www.aa-listen.de): Redaktionelle Top-10-Listen für Aalen (Beta)
+- [S-Listen](https://www.s-listen.de): Redaktionelle Top-10-Listen für Stuttgart (Beta)
 
 ## Seiten
 - [Startseite](https://www.nedimhasani.de): Hero mit Bio, aktuelle Projekte, Kontakt

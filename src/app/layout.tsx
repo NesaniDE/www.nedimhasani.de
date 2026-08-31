@@ -25,9 +25,9 @@ const KEYWORDS = [
   "Autonome Agenten",
   "Next.js Entwickler",
   "DACH",
-  "BEM-Marktplatz",
   "GD-Listen",
-  "Nesani Editor",
+  "AA-Listen",
+  "S-Listen",
 ];
 
 export const metadata: Metadata = {
