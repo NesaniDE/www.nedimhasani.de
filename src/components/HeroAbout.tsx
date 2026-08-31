@@ -189,11 +189,11 @@ export function HeroAbout() {
               <Reveal delay={280}>
                 <p>
                   Heute liegt mein Fokus auf{" "}
-                  <span className="text-white">Nesani</span>, wo ich digitale
-                  Strukturen, KI-Integration und autonome Systeme für moderne
-                  Unternehmen baue. Die persönlichen Projekte, die du hier
-                  siehst, sind die Seite meiner Arbeit, die in keinen
-                  Kunden-Brief passt.
+                  <span className="text-white">Nesani</span> — dort verantworte
+                  ich vor allem Social Media für Unternehmen und Unternehmer:
+                  Personal Branding für Geschäftsführer und Gründer sowie
+                  Content für Unternehmensmarken, von der Strategie über die
+                  Produktion bis zur laufenden Betreuung.
                 </p>
               </Reveal>
               <Reveal delay={340}>

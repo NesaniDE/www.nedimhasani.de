@@ -1,47 +1,6 @@
 import { ArrowUpRightIcon } from "@/components/icons";
 import { Reveal } from "@/components/Reveal";
 
-type SubProject = {
-  status: "Live" | "Beta" | "In Arbeit";
-  category: string;
-  title: string;
-  description: string;
-  href: string;
-};
-
-const subProjects: SubProject[] = [
-  {
-    status: "Beta",
-    category: "Lokal · SaaS",
-    title: "GD-Listen",
-    description:
-      "Kuratierte Top-10-Listen für Schwäbisch Gmünd — der erste Guide, den Einheimische wirklich nutzen. Restaurants, Cafés, Wochenend-Spots, ehrlich gerankt und laufend aktualisiert.",
-    href: "https://www.gd-listen.de",
-  },
-  {
-    status: "Beta",
-    category: "Lokal · SaaS",
-    title: "AA-Listen",
-    description:
-      "Dasselbe Prinzip für Aalen: redaktionelle Top-10-Listen für Gastro, Gesundheit, Handwerk und Shopping — mit offengelegter Methodik statt behaupteter Bestenliste.",
-    href: "https://www.aa-listen.de",
-  },
-  {
-    status: "Beta",
-    category: "Lokal · SaaS",
-    title: "S-Listen",
-    description:
-      "Der Stuttgarter Ableger — deutlich größer, mit Listen von Restaurants über Werbeagenturen bis Social-Media-Agenturen und Profilen quer durch die Stadtteile.",
-    href: "https://www.s-listen.de",
-  },
-];
-
-const statusColor: Record<SubProject["status"], string> = {
-  Live: "bg-emerald-400/15 text-emerald-300 ring-emerald-400/30",
-  Beta: "bg-amber-400/15 text-amber-200 ring-amber-400/30",
-  "In Arbeit": "bg-sky-400/15 text-sky-200 ring-sky-400/30",
-};
-
 const stats = [
   { value: "DACH", label: "Markt" },
   { value: "Schwäbisch Gmünd", label: "Standort" },
@@ -64,8 +23,9 @@ export function VlogSection() {
               Woran ich gerade arbeite.
             </h2>
             <p className="mt-5 md:mt-6 text-[15px] sm:text-[16px] md:text-[18px] leading-[1.6] md:leading-[1.55] tracking-[-0.025em] text-[#878787]">
-              Mein Fokus liegt aktuell voll auf Nesani — und den Produkten,
-              die wir unter diesem Dach aufbauen.
+              Mein Fokus liegt aktuell auf Social Media für Unternehmen und
+              Unternehmer — Aufbau, Produktion und laufende Betreuung. Alles
+              unter dem Dach von Nesani.
             </p>
           </div>
         </Reveal>
@@ -104,11 +64,11 @@ export function VlogSection() {
                 </p>
 
                 <p className="text-[14px] sm:text-[15px] md:text-[16px] leading-[1.65] tracking-[-0.02em] text-[#a0a0a0]">
-                  Mit Nesani baue ich digitale Strukturen, KI-Integration und
-                  autonome Systeme für ambitionierte Unternehmen im DACH-Raum.
-                  Vom ersten Workshop bis zum Launch in Wochen — fokussiert auf
-                  das, was wirklich wirkt. Alle Produkte unten entstehen unter
-                  diesem Dach.
+                  Nesani arbeitet in drei Bereichen: Social Media, Websites
+                  sowie KI und Automatisierung. Mein persönlicher Schwerpunkt
+                  liegt dabei auf Social Media — Personal Branding für
+                  Unternehmer und Content für Unternehmensmarken, von der
+                  Strategie bis zur laufenden Betreuung.
                 </p>
 
                 <span className="mt-7 md:mt-8 inline-flex items-center gap-2 text-[13px] sm:text-[14px] font-medium text-white/85 group-hover:text-white transition-colors">
@@ -135,51 +95,6 @@ export function VlogSection() {
           </a>
         </Reveal>
 
-        {/* Subline */}
-        <Reveal>
-          <div className="flex items-center gap-3 sm:gap-4 mb-6 md:mb-8">
-            <span className="h-px flex-1 bg-white/10" />
-            <p className="text-[10px] sm:text-[12px] uppercase tracking-[0.24em] sm:tracking-[0.28em] text-[#a0a0a0] text-center">
-              Unter dem Dach von Nesani
-            </p>
-            <span className="h-px flex-1 bg-white/10" />
-          </div>
-        </Reveal>
-
-        {/* Sub-projects */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
-          {subProjects.map((p, i) => (
-            <Reveal key={p.title} delay={80 + i * 80}>
-              <a
-                href={p.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white/[0.025] ring-1 ring-white/10 p-6 md:p-7 transition-all duration-300 hover:bg-white/[0.04] hover:ring-white/25 hover:-translate-y-0.5"
-              >
-                <div className="flex items-center gap-3 mb-4 md:mb-5">
-                  <span
-                    className={`inline-flex items-center rounded-full px-2.5 py-1 text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.18em] ring-1 ${statusColor[p.status]}`}
-                  >
-                    {p.status}
-                  </span>
-                </div>
-                <p className="text-[11px] sm:text-[12px] uppercase tracking-[0.22em] text-[#a0a0a0] mb-2 md:mb-3">
-                  {p.category}
-                </p>
-                <h4 className="text-[22px] sm:text-[24px] md:text-[26px] font-medium leading-[1.05] tracking-[-0.04em] text-white">
-                  {p.title}
-                </h4>
-                <p className="mt-3 md:mt-4 text-[14px] sm:text-[14.5px] leading-[1.6] tracking-[-0.02em] text-[#878787]">
-                  {p.description}
-                </p>
-                <span className="mt-auto pt-5 md:pt-6 inline-flex items-center gap-2 text-[13px] font-medium text-white/80 group-hover:text-white transition-colors">
-                  Zur Seite
-                  <ArrowUpRightIcon className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </span>
-              </a>
-            </Reveal>
-          ))}
-        </div>
       </div>
     </section>
   );

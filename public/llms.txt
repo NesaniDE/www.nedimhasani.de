@@ -3,17 +3,15 @@
 > Persönliche Website von Nedim Hasani — Gründer von Nesani UG (haftungsbeschränkt) aus Schwäbisch Gmünd. Software-Entwickler mit Schwerpunkt auf Web-, Mobile- und Produkt-Engineering, KI-Integration und autonomen Systemen für Unternehmen im DACH-Raum.
 
 ## Über Nedim
-- Gründer von Nesani — Studio für digitale Strukturen, KI-Integration und autonome Systeme
+- Gründer von Nesani — Studio für Social Media, Websites sowie KI und Automatisierung
 - Informatik-Studium an der Universität Stuttgart abgeschlossen
 - Frühere Mitarbeit an Projekten unter Christian Jungwirth Management — Berührungspunkte u.a. mit ESN, Jako, Oktagon MMA
 - Ansässig in Schwäbisch Gmünd, Deutschland
 - E-Mail: info@nedimhasani.de
 
 ## Aktuelle Projekte (alle unter Nesani)
-- [Nesani](https://www.nesani.de): Hauptprojekt — Studio für digitale Strukturen, KI und autonome Systeme im DACH-Raum
-- [GD-Listen](https://www.gd-listen.de): Kuratierte Top-10-Listen für Schwäbisch Gmünd (Beta)
-- [AA-Listen](https://www.aa-listen.de): Redaktionelle Top-10-Listen für Aalen (Beta)
-- [S-Listen](https://www.s-listen.de): Redaktionelle Top-10-Listen für Stuttgart (Beta)
+- [Nesani](https://www.nesani.de): Hauptprojekt — Studio für Social Media, Websites sowie KI und Automatisierung im DACH-Raum
+- Aktueller Schwerpunkt: Social Media für Unternehmen und Unternehmer — Personal Branding für Geschäftsführer und Gründer sowie Content für Unternehmensmarken, von der Strategie über die Produktion bis zur laufenden Betreuung
 
 ## Seiten
 - [Startseite](https://www.nedimhasani.de): Hero mit Bio, aktuelle Projekte, Kontakt
