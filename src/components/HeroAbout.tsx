@@ -115,8 +115,8 @@ export function HeroAbout() {
             className="hero-mission relative z-30 flex h-full w-full flex-col px-5 sm:px-6 md:px-10 pt-24 md:pt-36 pointer-events-auto"
           >
             <p className="max-w-[260px] sm:max-w-xs md:max-w-[420px] text-[17px] sm:text-[20px] md:text-[26px] lg:text-[28px] xl:text-[30px] leading-[1.18] sm:leading-[1.13] tracking-[-0.03em] text-[#878787] animate-hero-copy">
-              Gründer von Nesani. Ich baue Software-, Web- und App-Produkte —
-              für ambitionierte Marken und die Menschen dahinter.
+              Gründer von Nesani. Ich baue Personenmarken und Social Media
+              für Unternehmer — und die Technik, die dahintersteht.
             </p>
 
             <div className="mt-auto mb-8 md:mb-10 flex items-center gap-6 md:gap-7 animate-hero-socials">
@@ -157,19 +157,20 @@ export function HeroAbout() {
 
             <Reveal delay={80}>
               <h3 className="text-[18px] sm:text-[20px] md:text-[22px] leading-[1.32] tracking-[-0.025em] text-white mb-7 md:mb-8">
-                Gründer von Nesani und seit Jahren als Software-Entwickler in
-                Web, Mobile und Produkt-Engineering unterwegs.
+                Gründer von Nesani. Ich positioniere Geschäftsführer und
+                Unternehmen auf Social Media — mit einem Hintergrund, den in
+                dieser Ecke sonst kaum jemand mitbringt.
               </h3>
             </Reveal>
 
             <div className="space-y-5 md:space-y-6 text-[15px] sm:text-[16px] md:text-[18px] leading-[1.6] md:leading-[1.55] tracking-[-0.025em] text-[#878787]">
               <Reveal delay={160}>
                 <p>
-                  Mein Studium der Informatik habe ich an der Universität
-                  Stuttgart abgeschlossen und seitdem digitale Produkte gebaut
-                  — von Custom Web-Plattformen und Mobile-Apps bis hin zu
-                  internen Tools und Full-Stack-Software für wachsende
-                  Unternehmen.
+                  Studiert habe ich Informatik an der Universität Stuttgart.
+                  Das ist heute nicht mehr mein Tagesgeschäft, prägt aber, wie
+                  ich arbeite: Ich denke Sichtbarkeit als System — mit klaren
+                  Abläufen, messbaren Ergebnissen und ohne den Bauchgefühl-Anteil,
+                  den viele Kreativagenturen mitliefern.
                 </p>
               </Reveal>
               <Reveal delay={220}>

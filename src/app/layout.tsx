@@ -13,21 +13,20 @@ const onest = Onest({
 const SITE_URL = "https://www.nedimhasani.de";
 const TITLE = "Nedim Hasani — Personal Branding & Digitalstrategie";
 const DESCRIPTION =
-  "Nedim Hasani, Gründer von Nesani. Personal Branding für Geschäftsführer und Gründer — mit Informatik-Hintergrund statt reiner Kreativagentur.";
+  "Nedim Hasani, Gründer von Nesani: Personal Branding und Social Media für Geschäftsführer, Gründer und Unternehmensmarken — strukturiert statt Bauchgefühl.";
 const KEYWORDS = [
   "Nedim Hasani",
   "Nesani",
   "Nesani UG",
-  "Software-Entwickler Schwäbisch Gmünd",
-  "Webentwicklung",
-  "App-Entwicklung",
-  "KI-Integration",
-  "Autonome Agenten",
-  "Next.js Entwickler",
-  "DACH",
-  "Social Media für Unternehmen",
   "Personal Branding",
+  "Personal Branding Berater",
+  "Personal Branding für Geschäftsführer",
+  "Social Media für Unternehmen",
+  "Social-Media-Strategie",
   "Content für Unternehmensmarken",
+  "Personenmarke aufbauen",
+  "Schwäbisch Gmünd",
+  "DACH",
 ];
 
 export const metadata: Metadata = {
@@ -115,16 +114,15 @@ const personJsonLd = {
   },
   jobTitle: "Gründer & Personal-Branding-Berater",
   description:
-    "Gründer der Nesani UG mit abgeschlossenem Informatik-Studium. Schwerpunkt: Personal Branding für Geschäftsführer und Gründer sowie Social-Media-Strategie für Unternehmensmarken.",
+    "Berater für Personal Branding und Social Media aus Schwäbisch Gmünd. Positioniert Geschäftsführer, Gründer und Unternehmensmarken auf Social Media. Gründer der Nesani UG, Informatik-Studium an der Universität Stuttgart.",
   knowsAbout: [
     "Personal Branding",
     "Personenmarke",
     "Social-Media-Strategie",
     "Content-Strategie",
     "Markenpositionierung",
-    "Softwareentwicklung",
-    "Webentwicklung",
-    "KI-Integration",
+    "Employer Branding",
+    "Videoproduktion für Social Media",
   ],
   hasOccupation: {
     "@type": "Occupation",
