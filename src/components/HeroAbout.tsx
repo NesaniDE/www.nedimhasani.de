@@ -193,7 +193,7 @@ export function HeroAbout() {
                   <span className="text-white">Nesani</span> — dort verantworte
                   ich vor allem Social Media für Unternehmen und Unternehmer:{" "}
                   <a
-                    href="https://www.nesani.de/leistungen/personal-branding"
+                    href="https://www.nesani.de/leistungen/social-media"
                     className="text-white underline decoration-white/30 underline-offset-4 transition hover:decoration-white"
                   >
                     Personal Branding für Geschäftsführer und Gründer
