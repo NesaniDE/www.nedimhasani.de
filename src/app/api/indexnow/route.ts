@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import sitemap from "@/app/sitemap";
 
 export const runtime = "nodejs";
 
@@ -7,15 +8,30 @@ const SITE_URL = `https://${SITE_HOST}`;
 const INDEXNOW_KEY = "d2ef35e520984ac599b4a62b9262560d";
 const KEY_LOCATION = `${SITE_URL}/${INDEXNOW_KEY}.txt`;
 
-// Every public URL that should be pushed to IndexNow on each run.
-// Mirror this list with src/app/sitemap.ts.
-const URLS = [
-  `${SITE_URL}/`,
-  `${SITE_URL}/imprint`,
-  `${SITE_URL}/datenschutz`,
-];
+/**
+ * How far back changes are submitted. The cron runs daily; a three-day window
+ * submits every change on two runs, so one failed run loses nothing.
+ */
+const WINDOW_MS = 3 * 24 * 60 * 60 * 1000;
+
+/**
+ * Only pages whose sitemap lastmod falls within the window. Bing explicitly
+ * asks for changed URLs only; resubmitting everything on every run looks like
+ * spam to IndexNow. URLs come straight from sitemap(), so the two can't drift.
+ */
+function changedUrls(): string[] {
+  const since = Date.now() - WINDOW_MS;
+  return sitemap()
+    .filter((e) => e.lastModified && new Date(e.lastModified).getTime() >= since)
+    .map((e) => e.url);
+}
 
 async function submit() {
+  const urlList = changedUrls();
+  if (urlList.length === 0) {
+    return { ok: true, submittedUrls: 0, urls: urlList };
+  }
+
   const res = await fetch("https://api.indexnow.org/IndexNow", {
     method: "POST",
     headers: { "Content-Type": "application/json; charset=utf-8" },
@@ -23,7 +39,7 @@ async function submit() {
       host: SITE_HOST,
       key: INDEXNOW_KEY,
       keyLocation: KEY_LOCATION,
-      urlList: URLS,
+      urlList,
     }),
   });
 
@@ -31,6 +47,8 @@ async function submit() {
     ok: res.ok,
     status: res.status,
     statusText: res.statusText,
+    submittedUrls: urlList.length,
+    urls: urlList,
   };
 }
 
@@ -50,8 +68,7 @@ export async function GET(req: Request) {
   if (!authorized(req)) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
-  const result = await submit();
-  return NextResponse.json({ submittedUrls: URLS.length, ...result });
+  return NextResponse.json(await submit());
 }
 
 // Manual trigger from a logged-in browser session or curl
@@ -59,6 +76,5 @@ export async function POST(req: Request) {
   if (!authorized(req)) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
-  const result = await submit();
-  return NextResponse.json({ submittedUrls: URLS.length, ...result });
+  return NextResponse.json(await submit());
 }
