@@ -105,16 +105,18 @@ export const viewport: Viewport = {
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": `${SITE_URL}/#person`,
   name: "Nedim Hasani",
   url: SITE_URL,
+  mainEntityOfPage: SITE_URL,
   image: {
     "@type": "ImageObject",
     url: `${SITE_URL}/images/nedim.png`,
     caption: "Nedim Hasani",
   },
-  jobTitle: "Gründer & Personal-Branding-Berater",
+  jobTitle: "Gründer & Geschäftsführer, Nesani UG (haftungsbeschränkt)",
   description:
-    "Berater für Personal Branding und Social Media aus Schwäbisch Gmünd. Positioniert Geschäftsführer, Gründer und Unternehmensmarken auf Social Media. Gründer der Nesani UG, Informatik-Studium an der Universität Stuttgart.",
+    "Gründer und Geschäftsführer der Nesani UG (haftungsbeschränkt), Digitalagentur aus Schwäbisch Gmünd für Social Media, Websites und KI-Automatisierung. Schwerpunkt: Personal Branding für Geschäftsführer und Gründer sowie Social Media für Unternehmensmarken. Informatik-Studium an der Universität Stuttgart.",
   knowsAbout: [
     "Personal Branding",
     "Personenmarke",
@@ -123,6 +125,8 @@ const personJsonLd = {
     "Markenpositionierung",
     "Employer Branding",
     "Videoproduktion für Social Media",
+    "Webentwicklung",
+    "KI-Automatisierung",
   ],
   hasOccupation: {
     "@type": "Occupation",
@@ -134,12 +138,13 @@ const personJsonLd = {
   },
   worksFor: {
     "@type": "Organization",
+    "@id": "https://www.nesani.de/#organization",
     name: "Nesani UG (haftungsbeschränkt)",
     url: "https://www.nesani.de",
   },
   alumniOf: {
     "@type": "CollegeOrUniversity",
-    name: "University of Stuttgart",
+    name: "Universität Stuttgart",
   },
   address: {
     "@type": "PostalAddress",
@@ -154,19 +159,18 @@ const personJsonLd = {
     "https://www.tiktok.com/@nedimhasani",
     "https://www.youtube.com/@nedimhasani",
     "https://www.nesani.de/ueber-uns",
+    "https://www.nesani.de",
   ],
 };
 
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
   name: "Nedim Hasani",
   url: SITE_URL,
   inLanguage: "de-DE",
-  publisher: {
-    "@type": "Person",
-    name: "Nedim Hasani",
-  },
+  publisher: { "@id": `${SITE_URL}/#person` },
 };
 
 export default function RootLayout({

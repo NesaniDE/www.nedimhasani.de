@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Impressum",
   description:
-    "Impressum und rechtliche Angaben gemäß § 5 TMG für Nedim Hasani / Nesani UG (haftungsbeschränkt), Schwäbisch Gmünd.",
+    "Impressum und rechtliche Angaben gemäß § 5 DDG für Nedim Hasani / Nesani UG (haftungsbeschränkt), Schwäbisch Gmünd.",
   alternates: { canonical: "https://www.nedimhasani.de/imprint" },
 };
 
@@ -32,13 +32,13 @@ export default function ImprintPage() {
             Impressum
           </h1>
           <p className="text-[13px] sm:text-[14px] text-[#a0a0a0] mb-10 md:mb-14">
-            Stand: April 2026
+            Stand: Oktober 2026
           </p>
 
           <div className="space-y-10 md:space-y-12 text-[15px] sm:text-[16px] md:text-[17px] leading-[1.65] tracking-[-0.02em] text-[#878787]">
             <section>
               <h2 className="text-[20px] font-medium tracking-[-0.025em] text-white mb-4">
-                Angaben gemäß § 5 TMG
+                Angaben gemäß § 5 DDG
               </h2>
               <p className="text-white">
                 Nesani UG (haftungsbeschränkt)
@@ -105,10 +105,9 @@ export default function ImprintPage() {
                 Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt.
                 Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte
                 können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter
-                sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen
-                Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8
-                bis 10 TMG sind wir als Diensteanbieter jedoch nicht
-                verpflichtet, übermittelte oder gespeicherte fremde
+                sind wir für eigene Inhalte auf diesen Seiten nach den
+                allgemeinen Gesetzen verantwortlich. Wir sind als
+                Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde
                 Informationen zu überwachen oder nach Umständen zu forschen,
                 die auf eine rechtswidrige Tätigkeit hinweisen.
               </p>

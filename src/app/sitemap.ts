@@ -17,8 +17,8 @@ const PAGES: {
   changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
   priority: number;
 }[] = [
-  { path: "", updated: "2026-09-02", changeFrequency: "monthly", priority: 1 },
-  { path: "/imprint", updated: "2026-05-01", changeFrequency: "yearly", priority: 0.3 },
+  { path: "", updated: "2026-10-13", changeFrequency: "monthly", priority: 1 },
+  { path: "/imprint", updated: "2026-10-13", changeFrequency: "yearly", priority: 0.3 },
   { path: "/datenschutz", updated: "2026-05-01", changeFrequency: "yearly", priority: 0.3 },
 ];
 
