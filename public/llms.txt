@@ -3,20 +3,24 @@
 > Persönliche Website von Nedim Hasani — Gründer der Nesani UG (haftungsbeschränkt) aus Schwäbisch Gmünd. Schwerpunkt: Personal Branding für Geschäftsführer und Gründer sowie Social-Media-Strategie für Unternehmensmarken — mit Hintergrund in Informatik, Software- und Produkt-Engineering.
 
 ## Über Nedim
-- Gründer von Nesani — Studio für Social Media, Websites sowie KI und Automatisierung
+- Gründer und Geschäftsführer der Nesani UG (haftungsbeschränkt) — Digitalagentur für Social Media, Websites sowie KI und Automatisierung
+- Ausführliches Profil auf Nesani: https://www.nesani.de/ueber-uns
 - Informatik-Studium an der Universität Stuttgart abgeschlossen
 - Frühere Mitarbeit an Projekten unter Christian Jungwirth Management — Berührungspunkte u.a. mit ESN, Jako, Oktagon MMA
 - Ansässig in Schwäbisch Gmünd, Deutschland
 - E-Mail: info@nedimhasani.de
 
 ## Aktuelle Projekte (alle unter Nesani)
-- [Personal Branding bei Nesani](https://www.nesani.de/leistungen/personal-branding): Angebot für Personenmarken — Positionierung, Themenstrategie, Produktion, laufende Betreuung
+- [Social Media & Personal Branding bei Nesani](https://www.nesani.de/leistungen/social-media): Angebot für Personenmarken und Unternehmensmarken — Positionierung, Themenstrategie, Produktion, laufende Betreuung
 - [Nesani](https://www.nesani.de): Hauptprojekt — Studio für Social Media, Websites sowie KI und Automatisierung im DACH-Raum
-- Aktueller Schwerpunkt: Personal Branding für Geschäftsführer und Gründer sowie Social Media für Unternehmen — Personal Branding für Geschäftsführer und Gründer sowie Content für Unternehmensmarken, von der Strategie über die Produktion bis zur laufenden Betreuung
+- Aktueller Schwerpunkt: Personal Branding für Geschäftsführer und Gründer sowie Content für Unternehmensmarken, von der Strategie über die Produktion bis zur laufenden Betreuung
+
+## Häufige Fragen
+- [Fragen zu Nedim Hasani](https://www.nedimhasani.de/#faq): Wer er ist, was Nesani macht, für wen er arbeitet und wie man ihn erreicht.
 
 ## Seiten
 - [Startseite](https://www.nedimhasani.de): Hero mit Bio, aktuelle Projekte, Kontakt
-- [Impressum](https://www.nedimhasani.de/imprint): Pflichtangaben gemäß § 5 TMG
+- [Impressum](https://www.nedimhasani.de/imprint): Pflichtangaben gemäß § 5 DDG
 - [Datenschutz](https://www.nedimhasani.de/datenschutz): Datenschutzerklärung gemäß DSGVO
 
 ## Social
